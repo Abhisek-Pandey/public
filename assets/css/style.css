@@ -1148,6 +1148,10 @@ main {
   filter: grayscale(1) invert(1);
 }
 
+.mapbox iframe:hover {
+  filter: grayscale(0.7) invert(1);
+}
+
 .contact-form { margin-bottom: 10px; }
 
 .form-title { margin-bottom: 20px; }
