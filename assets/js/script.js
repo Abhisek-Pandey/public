@@ -120,7 +120,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formBtn = document.querySelectorAll("[data-form-btn]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -128,9 +128,13 @@ for (let i = 0; i < formInputs.length; i++) {
 
     // check form validation
     if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+      for (let i = 0; i < formBtn.length; i++) {
+        formBtn[i].removeAttribute("disabled");
+      }
     } else {
-      formBtn.setAttribute("disabled", "");
+      for (let i = 0; i < formBtn.length; i++) {
+        formBtn[i].removeAttribute("disabled");
+      }
     }
 
   });
@@ -159,4 +163,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+//mail or message check
+document.querySelector("[EMAIL]").addEventListener('click', function() {
+  const fullname = 'Message From '+document.querySelector('input[name="fullname"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  const mailtoLink = `mailto:pandey240600@gmail.com?subject=${fullname}&body=${encodeURIComponent('Email: "' + email + '" wants ' +
+      'to convey that: ' + message)}`;
+  window.open(mailtoLink, '_blank')
+});
+
+document.querySelector("[WHATSAPP]").addEventListener('click', function() {
+  const fullname = document.querySelector('input[name="fullname"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  const whatsappLink = `https://api.whatsapp.com/send?phone=917992624218&text=${encodeURIComponent('*Name:* ' + fullname + 
+      '*\nEmail: *' + email + '\n*Message:* ' + message)}`;
+  window.open(whatsappLink, '_blank');
+});
 
