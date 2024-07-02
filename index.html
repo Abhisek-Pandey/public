@@ -1111,7 +1111,7 @@
 
                 <h3 class="h3 form-title">Contact Form</h3>
 
-                <form action="#" class="form" data-form>
+                <form class="form" data-form>
 
                     <div class="input-wrapper">
                         <input class="form-input" data-form-input name="fullname" placeholder="Full name" required
@@ -1124,11 +1124,16 @@
                     <textarea class="form-input" data-form-input name="message" placeholder="Your Message"
                               required></textarea>
 
-                    <button class="form-btn" data-form-btn disabled type="submit">
-                        <ion-icon name="paper-plane"></ion-icon>
-                        <span>Send Message</span>
+                    <div class="form-btn-cnt">
+                    <button class="form-btn" data-form-btn EMAIL disabled type="button">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <span email >Email</span>
                     </button>
-
+                    <button class="form-btn" data-form-btn WHATSAPP disabled type="button">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <span whatsapp >Message</span>
+                    </button>
+                    </div>
                 </form>
 
             </section>
