@@ -307,8 +307,54 @@ main {
 }
 
 
+/*-----------------------------------*\
+  #LOADING SCREEN
+\*-----------------------------------*/
 
+.loading  {
+  position: absolute;  /* Change position to absolute */
+  top: 50%;  /* Position vertically at 50% (center) */
+  left: 50%;  /* Position horizontally at 50% (center) */
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--eerie-black-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  animation: shrink 3s ease-in-out forwards;
+  z-index: 6;
+}
 
+.loading img  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: shrink2 4s ease-in-out forwards;
+}
+
+@keyframes shrink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes shrink2 {
+  from {
+    width: 80vw;
+    height: 80vh;
+  }
+  to {
+    width: 10vw;
+    height: 10vh;
+    opacity: 0;
+  }
+}
 
 /*-----------------------------------*\
   #SIDEBAR

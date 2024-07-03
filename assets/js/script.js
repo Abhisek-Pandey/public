@@ -187,3 +187,12 @@ document.querySelector("[WHATSAPP]").addEventListener('click', function() {
   window.open(whatsappLink, '_blank');
 });
 
+
+//loading screen timer
+const loadingScreen = document.querySelector('.loading');
+const main = document.querySelector('main');
+
+setTimeout(() => {
+  loadingScreen.remove();
+}, 4000);
+
