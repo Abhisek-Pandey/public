@@ -183,7 +183,7 @@ document.querySelector("[WHATSAPP]").addEventListener('click', function() {
   const message = document.querySelector('textarea[name="message"]').value;
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=917992624218&text=${encodeURIComponent('*Name:* ' + fullname + 
-      '*\nEmail: *' + email + '\n*Message:* ' + message)}`;
+      '*\nEmail:* ' + email + '\n*Message:* ' + message)}`;
   window.open(whatsappLink, '_blank');
 });
 
