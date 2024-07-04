@@ -695,6 +695,10 @@ main {
 
 .service-icon-box img { margin: auto; }
 
+.light_theme .service-icon-box img {
+  filter: hue-rotate(180deg) saturate(100%) brightness(75%);
+}
+
 .service-content-box { text-align: center; }
 
 .service-item-title { margin-bottom: 7px; }
