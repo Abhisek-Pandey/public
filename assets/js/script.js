@@ -164,7 +164,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-
 //mail or message check
 document.querySelector("[EMAIL]").addEventListener('click', function() {
   const fullname = 'Message From '+document.querySelector('input[name="fullname"]').value;
