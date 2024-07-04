@@ -6,7 +6,6 @@
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
-
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
@@ -165,7 +164,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-
 //mail or message check
 document.querySelector("[EMAIL]").addEventListener('click', function() {
   const fullname = 'Message From '+document.querySelector('input[name="fullname"]').value;
@@ -183,7 +181,7 @@ document.querySelector("[WHATSAPP]").addEventListener('click', function() {
   const message = document.querySelector('textarea[name="message"]').value;
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=917992624218&text=${encodeURIComponent('*Name:* ' + fullname + 
-      '*\nEmail:* ' + email + '\n*Message:* ' + message)}`;
+      '\n*Email:* ' + email + '\n*Message:* ' + message)}`;
   window.open(whatsappLink, '_blank');
 });
 
@@ -194,5 +192,42 @@ const main = document.querySelector('main');
 
 setTimeout(() => {
   loadingScreen.remove();
-}, 4000);
+}, 2000);
 
+
+
+
+
+const themeToggleBtn = document.querySelector("[data-theme-btn]");
+
+themeToggleBtn.addEventListener("click", function () {
+
+  elementToggleFunc(themeToggleBtn);
+
+  if (themeToggleBtn.classList.contains("active")) {
+    document.body.classList.remove("dark_theme");
+    document.body.classList.add("light_theme");
+
+    localStorage.setItem("theme", "light_theme");
+  } else {
+    document.body.classList.add("dark_theme");
+    document.body.classList.remove("light_theme");
+
+    localStorage.setItem("theme", "dark_theme");
+  }
+
+});
+
+/**
+ * check & apply last time selected theme from localStorage
+ */
+
+if (localStorage.getItem("theme") === "light_theme") {
+  themeToggleBtn.classList.add("active");
+  document.body.classList.remove("dark_theme");
+  document.body.classList.add("light_theme");
+} else {
+  themeToggleBtn.classList.remove("active");
+  document.body.classList.remove("light_theme");
+  document.body.classList.add("dark_theme");
+}
