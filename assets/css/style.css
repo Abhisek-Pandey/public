@@ -112,7 +112,7 @@ body.light_theme {
   --linear-gradient-1: linear-gradient(
           to bottom right,
           hsl(210, 100%, 97%) 3%,
-          hsl(210, 100%, 80%) 97%
+          hsl(210, 100%, 80%) 0%
   );
 
   --linear-gradient-2: linear-gradient(
@@ -147,19 +147,19 @@ body.light_theme {
 
   /* Colors */
 
-  --color-1: hsl(210, 100%, 98%);  /* Light blue */
-  --color-2: hsl(210, 100%, 80%);  /* Lighter blue */
-  --color-3: hsl(210, 100%, 93%);  /* Even lighter blue */
-  --color-4: hsl(210, 100%, 92%);  /* Very light blue */
-  --color-5: hsl(200, 100%, 50%);   /* Orange */
-  --color-6: hsl(0, 0%, 5%);  /* White */
-  --color-7: hsl(0, 0%, 13%);  /* Almost white */
-  --color-8: hsl(200, 100%, 50%);   /* Orange */
-  --color-9: hsl(210, 70%, 45%);    /* Lighter orange */
-  --color-10: hsl(210, 50%, 5%); /* Lighter blue */
-  --color-10-70: hsla(210, 70%, 55%, 0.7);  /* Light blue with 70% opacity */
-  --color-11: hsl(210, 30%, 70%);   /* Light blue with a tint of green */
-  --color-12: hsla(210, 100%, 95%, 0.75); /* Light blue with 75% opacity */
+  --color-1: hsl(210, 100%, 98%);
+  --color-2: hsl(210, 100%, 80%);
+  --color-3: hsl(210, 100%, 93%);
+  --color-4: hsl(210, 100%, 92%);
+  --color-5: hsl(200, 100%, 50%);
+  --color-6: hsl(0, 0%, 5%);
+  --color-7: hsl(0, 0%, 13%);
+  --color-8: hsl(200, 100%, 50%);
+  --color-9: hsl(210, 70%, 45%);
+  --color-10: hsl(210, 50%, 5%);
+  --color-10-70: hsla(210, 70%, 55%, 0.7);
+  --color-11: hsl(210, 30%, 70%);
+  --color-12: hsla(210, 100%, 95%, 0.75);
 
 
 }
@@ -199,8 +199,7 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--color-8);
-  color: var(--color-5);
+  color: var(--color-8);
 }
 
 :focus { outline-color: var(--color-8); }
@@ -218,7 +217,7 @@ body { background: var(--color-5); }
   padding: 4px;
   width: 40px;
   background: var(--color-1);
-  border-radius: 100px;
+  border-radius: 10px;
   transition: var(--transition-1);
   position: absolute;
   top: -13px;
@@ -433,10 +432,6 @@ main {
   justify-content: center;
   align-items: center;
   animation: shrink2 2s ease-in-out forwards;
-}
-
-.light_theme .loading img  {
-  filter: hue-rotate(180deg) saturate(100%) brightness(100%) ;
 }
 
 
@@ -695,10 +690,6 @@ main {
 
 .service-icon-box img { margin: auto; }
 
-.light_theme .service-icon-box img {
-  filter: hue-rotate(180deg) saturate(100%) brightness(75%);
-}
-
 .service-content-box { text-align: center; }
 
 .service-item-title { margin-bottom: 7px; }
@@ -710,6 +701,17 @@ main {
   line-height: 1.6;
 }
 
+.dark {
+  display: none;
+}
+
+.dark_theme .dark{
+display: flex;
+}
+
+.dark_theme .light  {
+  display: none;
+}
 
 /**
  * #testimonials 
@@ -890,7 +892,6 @@ main {
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
-  padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;

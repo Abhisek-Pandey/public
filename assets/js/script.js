@@ -194,7 +194,9 @@ setTimeout(() => {
   loadingScreen.remove();
 }, 2000);
 
-
+if (localStorage.getItem("theme") === null) {
+  localStorage.setItem("theme", "light_theme"); // or "dark_theme" based on default
+}
 
 
 
@@ -221,7 +223,6 @@ themeToggleBtn.addEventListener("click", function () {
 /**
  * check & apply last time selected theme from localStorage
  */
-
 if (localStorage.getItem("theme") === "light_theme") {
   themeToggleBtn.classList.add("active");
   document.body.classList.remove("dark_theme");
