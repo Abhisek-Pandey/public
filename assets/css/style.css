@@ -157,7 +157,7 @@ body.light_theme {
   --color-8: hsl(200, 100%, 50%);
   --color-9: hsl(210, 70%, 45%);
   --color-10: hsl(210, 50%, 5%);
-  --color-10-70: hsla(210, 70%, 55%, 0.7);
+  --color-10-70: hsl(210, 70%, 55%);
   --color-11: hsl(210, 30%, 70%);
   --color-12: hsla(210, 100%, 95%, 0.75);
 
@@ -310,6 +310,7 @@ article { display: none; }
 
 article.active {
   display: block;
+  transition: var(--transition-2);
   animation: fade 0.5s ease backwards;
 }
 
@@ -593,8 +594,6 @@ main {
 .social-item .social-link:hover { color: var(--color-10); }
 
 .light_theme .social-link:hover { color: hsl(207, 100%, 49%); }
-
-
 
 /*-----------------------------------*\
   #NAVBAR
@@ -2020,6 +2019,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     justify-content: center;
     align-items: stretch;
     gap: 25px;
+    transition: var(--transition-2);
   }
 
   .main-content {
@@ -2093,4 +2093,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+@media (min-width: 1600px) {
+  main {
+    max-width: 1550px;
+  }
 }
