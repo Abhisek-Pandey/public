@@ -705,7 +705,7 @@ main {
   display: none;
 }
 
-.dark_theme .dark{
+.dark_theme .dark {
 display: flex;
 }
 
@@ -1660,11 +1660,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .modal-avatar-box img { width: 65px; }
 
+  .modal-img-wrapper > img.dark {
+    display: none;
+  }
+
+  /* Style for both light and dark icons */
   .modal-img-wrapper > img {
     display: block;
     flex-grow: 1;
     width: 35px;
   }
+
+  /* Show the dark icon only when the body has dark_theme class */
+  body.dark_theme .modal-img-wrapper > img.dark {
+    display: block;
+  }
+
+  /* Hide the light icon when the body has dark_theme class  */
+  body.dark_theme .modal-img-wrapper > img.light {
+    display: none;
+  }
+
 
   /* clients */
 
