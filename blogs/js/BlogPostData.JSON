@@ -1,14 +1,21 @@
 {
-  "anchors": [
+  "technical": [
     {
       "id": "BlogPost1",
-      "href": "./MakeInOdishaConclave.html",
-      "text": "Make in Odisha Conclave 2022"
+      "href": "./frameworksguide.html",
+      "text": "Unveiling the Power of Frameworks: A Guide to Java-Based Development"
     },
     {
       "id": "BlogPost2",
-      "href": "./MakeInOdishaConclave.html",
-      "text": "Make in Odisha Conclave 2022"
+      "href": "./JavaJourney.html",
+      "text": "Brewing Up Your Java Journey: A Beginner's Guide"
+    }
+  ],
+  "events": [
+    {
+      "id": "BlogPost1",
+      "href": "MakeInOdishaConclave.html",
+      "text": "Make in Odisha Conclave 2022: A Journey of Innovation and Opportunity"
     }
   ]
 }
