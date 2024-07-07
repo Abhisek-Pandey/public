@@ -3,19 +3,39 @@
     {
       "id": "BlogPost1",
       "href": "./frameworksguide.html",
-      "text": "Unveiling the Power of Frameworks: A Guide to Java-Based Development"
+      "text": "Unveiling the Power of Frameworks"
     },
     {
       "id": "BlogPost2",
       "href": "./JavaJourney.html",
-      "text": "Brewing Up Your Java Journey: A Beginner's Guide"
+      "text": "Brewing Up Your Java Journey"
     }
   ],
   "events": [
     {
       "id": "BlogPost1",
       "href": "MakeInOdishaConclave.html",
-      "text": "Make in Odisha Conclave 2022: A Journey of Innovation and Opportunity"
+      "text": "Make in Odisha Conclave 2022"
+    }
+  ],
+  "index": [
+    {
+      "id": "BlogPost1",
+      "href": "./blogs/technical/frameworksguide.html",
+      "category": "Technical Dives",
+      "date": "2023-12-01",
+      "title": "Unveiling the Power of Frameworks: A Guide to Java-Based Development",
+      "text": "Frameworks: Build Robust Apps Without Reinventing the Wheel, Frameworks Demystified",
+      "img": "./blogs/images/FrameworkGuide-1.png"
+    },
+    {
+      "id": "BlogPost2",
+      "href": "./blogs/technical/JavaJourney.html",
+      "category": "Technical Dives",
+      "date": "2023-09-20",
+      "title": "Brewing Up Your Java Journey: A Beginner's Guide",
+      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here.",
+      "img": "./blogs/images/JavaJourney-1.png"
     }
   ]
 }
