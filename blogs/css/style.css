@@ -1,0 +1,928 @@
+:root {
+    /**
+     * typography
+     */
+
+    /* font-family */
+    --ff-poppins: 'Poppins', sans-serif;
+
+    /* font-size */
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 16px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+    --fs-7: 13px;
+    --fs-8: 11px;
+
+    /* font-weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+
+    /**
+     * shadow
+     */
+
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+    /**
+     * transition
+     */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+
+}
+
+
+body.dark_theme {
+
+
+    --linear-gradient-1: linear-gradient(
+            to bottom right,
+            hsl(240, 1%, 25%) 3%,
+            hsl(0, 0%, 19%) 97%
+    );
+    --linear-gradient-2: linear-gradient(
+            to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%
+    ), hsl(240, 2%, 13%);
+    --linear-gradient-3: linear-gradient(
+            to bottom right,
+            hsl(45, 100%, 71%) 0%,
+            hsla(36, 100%, 69%, 0) 50%
+    );
+    --linear-gradient-4: linear-gradient(
+            135deg,
+            hsla(45, 100%, 71%, 0.251) 0%,
+            hsla(35, 100%, 68%, 0) 59.86%
+    ), hsl(240, 2%, 13%);
+    --linear-gradient-5: linear-gradient(
+            to bottom right,
+            hsl(0, 0%, 25%) 0%,
+            hsla(0, 0%, 25%, 0) 50%
+    );
+    --linear-gradient-6: linear-gradient(
+            to right,
+            hsl(45, 100%, 72%),
+            hsl(35, 100%, 68%)
+    );
+
+    /* solid */
+
+    --color-1: hsl(0, 0%, 22%);
+    --color-2: hsl(240, 1%, 17%);
+    --color-3: hsl(240, 2%, 13%);
+    --color-4: hsl(240, 2%, 12%);
+    --color-5: hsl(0, 0%, 7%);
+    --color-6: hsl(0, 0%, 100%);
+    --color-7: hsl(0, 0%, 88%);
+    --color-8: hsl(45, 100%, 72%);
+    --color-9: hsl(45, 54%, 58%);
+    --color-10: hsl(0, 0%, 84%);
+    --color-10-70: hsla(0, 0%, 84%, 0.7);
+    --color-11: hsl(0, 43%, 51%);
+    --color-12: hsla(240, 1%, 17%, 0.75);
+
+}
+
+body.light_theme {
+    /* Gradients */
+
+    --linear-gradient-1: linear-gradient(
+            to bottom right,
+            hsl(210, 100%, 97%) 3%,
+            hsl(210, 100%, 80%) 0%
+    );
+
+    --linear-gradient-2: linear-gradient(
+            to bottom right,
+            hsla(210, 100%, 97%, 0.251) 0%,
+            hsla(210, 100%, 95%, 0) 100%
+    ), hsl(210, 100%, 93%);
+
+    --linear-gradient-3: linear-gradient(
+            to bottom right,
+            hsl(200, 100%, 68%) 0%,
+            hsla(210, 100%, 86%, 0) 50%
+    );
+
+    --linear-gradient-4: linear-gradient(
+            135deg,
+            hsla(210, 100%, 78%, 0.251) 0%,
+            hsla(15, 100%, 85%, 0) 59.86%
+    ), hsl(210, 100%, 93%);
+
+    --linear-gradient-5: linear-gradient(
+            to bottom right,
+            hsl(210, 100%, 87%) 0%,
+            hsla(210, 100%, 97%, 0) 50%
+    );
+
+    --linear-gradient-6: linear-gradient(
+            to right,
+            hsl(210, 100%, 50%),
+            hsl(210, 100%, 67%)
+    );
+
+    /* Colors */
+
+    --color-1: hsl(210, 100%, 98%);
+    --color-2: hsl(210, 100%, 80%);
+    --color-3: hsl(210, 100%, 93%);
+    --color-4: hsl(210, 100%, 92%);
+    --color-5: hsl(200, 100%, 50%);
+    --color-6: hsl(0, 0%, 5%);
+    --color-7: hsl(0, 0%, 13%);
+    --color-8: hsl(200, 100%, 50%);
+    --color-9: hsl(210, 70%, 45%);
+    --color-10: hsl(210, 50%, 5%);
+    --color-10-70: hsl(210, 70%, 55%);
+    --color-11: hsl(210, 30%, 70%);
+    --color-12: hsla(210, 100%, 95%, 0.75);
+
+
+}
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img, ion-icon, a, button, time, span {
+    display: block;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    background: none;
+    font: inherit;
+}
+
+::selection {
+    color: var(--color-8);
+}
+
+:focus {
+    outline-color: var(--color-8);
+}
+
+html {
+    font-family: var(--ff-poppins);
+}
+
+body {
+    background: var(--color-5);
+}
+
+
+/*-----------------------------------*\
+  #THEME BUTTON
+\*-----------------------------------*/
+
+
+.theme-btn {
+    padding: 4px;
+    width: 40px;
+    background: var(--color-1);
+    border-radius: 10px;
+    transition: var(--transition-1);
+    position: absolute;
+    top: -13px;
+    right: 23px;
+    box-shadow: var(--shadow-2);
+    z-index: 3;
+}
+
+
+.theme-btn .icon {
+    position: relative;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    box-shadow: inset 4.5px -4px var(--color-8);
+    transition: var(--transition-1);
+}
+
+.theme-btn.active .icon {
+    left: 20px;
+    box-shadow: inset 20px -20px var(--color-5);
+}
+
+.theme-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--linear-gradient-2);
+    transition: var(--transition-1);
+    z-index: -1;
+}
+
+.theme-btn:hover,
+.theme-btn:focus {
+    background: var(--linear-gradient-3);
+}
+
+.theme-btn:hover::before,
+.theme-btn:focus::before {
+    background: var(--linear-gradient-4);
+}
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.sidebar,
+article {
+    background: var(--color-4);
+    border: 1px solid var(--color-1);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--shadow-1);
+    z-index: 1;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background: var(--color-10-70);
+    margin: 16px 0;
+}
+
+article {
+    display: none;
+}
+
+article.active {
+    display: block;
+    animation: fade 0.5s ease backwards;
+}
+
+.h2,
+.h3,
+.h4,
+.h5 {
+    color: var(--color-7);
+    text-transform: capitalize;
+}
+
+.h2 {
+    font-size: var(--fs-1);
+}
+
+.h3 {
+    font-size: var(--fs-2);
+}
+
+.h4 {
+    font-size: var(--fs-4);
+}
+
+.h5 {
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+}
+
+.article-title {
+    position: relative;
+    padding-bottom: 7px;
+}
+
+
+.article-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--linear-gradient-6);
+    border-radius: 3px;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    width: 5px; /* for vertical scrollbar */
+    height: 5px; /* for horizontal scrollbar */
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+    background: var(--color-2);
+    border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-8);
+    border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+    width: 20px;
+}
+
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
+
+main {
+    margin: 15px 12px;
+    margin-bottom: 75px;
+    min-width: 259px;
+}
+
+/*-----------------------------------*\
+  #SIDEBAR
+\*-----------------------------------*/
+
+.sidebar {
+    margin-bottom: 15px;
+    max-height: 112px;
+    overflow: hidden;
+    transition: var(--transition-2);
+}
+
+.sidebar.active {
+    max-height: 405px;
+}
+
+.sidebar-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-box {
+    background: var(--linear-gradient-1);
+    border-radius: 20px;
+    object-fit: contain;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.avatar-box img {
+    width: 100%;
+}
+
+.info-content .name {
+    color: var(--color-7);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-600);
+    letter-spacing: 0.25px;
+}
+
+.info-content .title {
+    color: var(--color-6);
+    background: var(--color-2);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-400);
+    width: max-content;
+    padding: 3px 22px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.info_more-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 0 15px;
+    font-size: 13px;
+    color: var(--color-8);
+    background: var(--linear-gradient-5);
+    padding: 10px;
+    box-shadow: var(--shadow-2);
+    transition: var(--transition-1);
+    z-index: 1;
+}
+
+.info_more-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--linear-gradient-2);
+    transition: var(--transition-1);
+    z-index: -1;
+}
+
+.info_more-btn:hover,
+.info_more-btn:focus {
+    background: var(--linear-gradient-3);
+}
+
+.info_more-btn:hover::before,
+.info_more-btn:focus::before {
+    background: var(--linear-gradient-4);
+}
+
+
+.sidebar-info_more {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-2);
+}
+
+.sidebar.active .sidebar-info_more {
+    display: inherit;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about .article-title {
+    margin-bottom: 15px;
+}
+
+.about-text {
+    color: var(--color-10);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+.article-title {
+    margin-bottom: 30px;
+}
+
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
+
+.blog-posts {
+    margin-bottom: 10px;
+}
+
+.blog-posts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.blog-post-item > a {
+    position: relative;
+    background: var(--linear-gradient-5);
+    height: 100%;
+    box-shadow: var(--shadow-4);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.blog-post-item > a::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--color-3);
+    z-index: -1;
+}
+
+.blog-banner-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.blog-banner-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-1);
+}
+
+.blog-post-item > a:hover .blog-banner-box img {
+    transform: scale(1.1);
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.blog-meta :is(.blog-category, time) {
+    color: var(--color-10-70);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+}
+
+.blog-meta .dot {
+    background: var(--color-10-70);
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.blog-item-title {
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: var(--transition-1);
+}
+
+.blog-post-item > a:hover .blog-item-title {
+    color: var(--color-8);
+}
+
+.blog-text {
+    color: var(--color-10);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+@media (min-width: 450px) {
+
+    .blog-banner-box {
+        height: auto;
+    }
+
+}
+
+
+@media (min-width: 580px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+    :root {
+
+        /**
+         * typography
+         */
+
+        --fs-1: 32px;
+        --fs-2: 24px;
+        --fs-3: 26px;
+        --fs-4: 18px;
+        --fs-6: 15px;
+        --fs-7: 15px;
+        --fs-8: 12px;
+
+    }
+
+
+    /**
+     * #REUSED STYLE
+     */
+    .sidebar, article {
+        width: 520px;
+        margin-inline: auto;
+        padding: 30px;
+        transition: var(--transition-2);
+    }
+
+    .article-title {
+        font-weight: var(--fw-600);
+        padding-bottom: 15px;
+    }
+
+    .article-title::after {
+        width: 40px;
+        height: 5px;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 18px;
+    }
+
+
+    /**
+     * #MAIN
+     */
+    main {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+
+    /**
+     * #SIDEBAR
+     */
+    .sidebar {
+        max-height: 180px;
+        margin-bottom: 30px;
+    }
+
+    .sidebar.active {
+        max-height: 584px;
+    }
+
+    .sidebar-info {
+        gap: 25px;
+    }
+
+    .avatar-box {
+        border-radius: 30px;
+    }
+
+
+    .info-content .name {
+        margin-bottom: 0px;
+    }
+
+    .info-content .title {
+        padding: 5px 18px;
+    }
+
+    .info_more-btn {
+        top: -30px;
+        right: -30px;
+        padding: 10px 15px;
+    }
+
+
+    .info_more-btn ion-icon {
+        display: flex;
+    }
+
+    .theme-btn {
+        top: -27px;
+        right: 20px;
+        padding: 5px 5px;
+        width: 45px;
+    }
+
+    .theme-btn .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .separator {
+        margin: 32px 0;
+    }
+
+    /**
+  * #ABOUT
+  */
+    .about .article-title {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        margin-bottom: 40px;
+    }
+
+    .blog-banner-box {
+        border-radius: 16px;
+    }
+
+    .blog-posts-list {
+        gap: 30px;
+    }
+
+    .blog-content {
+        padding: 25px;
+    }
+
+}
+
+
+/**
+ * responsive larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+    /**
+     * REUSED STYLE
+     */
+    .sidebar, article {
+        width: 700px;
+    }
+
+    .has-scrollbar::-webkit-scrollbar-button {
+        width: 100px;
+    }
+
+    .article-title {
+        padding-bottom: 20px;
+    }
+
+    .blog-posts-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/**
+ * responsive larger than 1024px screen
+ */
+@media (min-width: 1024px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+    :root {
+
+        /**
+        * shadow
+        */
+
+        --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+        --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+        --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+
+    }
+
+
+    /**
+     * REUSED STYLE
+     */
+    .sidebar, article {
+        width: 950px;
+        box-shadow: var(--shadow-5);
+    }
+
+
+    /**
+     * MAIN
+     */
+    main {
+        margin-bottom: 60px;
+    }
+
+    .main-content {
+        position: relative;
+        width: max-content;
+        margin: auto;
+    }
+
+    .blog-banner-box {
+        height: 230px;
+    }
+}
+
+
+/**
+ * responsive larger than 1250px screen
+ */
+
+@media (min-width: 1250px) {
+
+    /**
+     * RESET
+     */
+    body::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: var(--color-5);
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border: 5px solid var(--color-5);
+        background: hsla(0, 0%, 100%, 0.1);
+        border-radius: 20px;
+        box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+        inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+        background: hsla(0, 0%, 100%, 0.15);
+    }
+
+    body::-webkit-scrollbar-button {
+        height: 60px;
+    }
+
+
+    /**
+     * REUSED STYLE
+     */
+    .sidebar, article {
+        width: auto;
+    }
+
+    article {
+        min-height: 100%;
+    }
+
+    .avatar-box img {
+        width: 100%;
+    }
+
+    /**
+     * MAIN
+     */
+    main {
+        max-width: 1200px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .main-content {
+        min-width: 75%;
+        width: 75%;
+        margin: 0;
+    }
+
+
+    /**
+     * SIDEBAR
+     */
+    .sidebar {
+        position: sticky;
+        top: 60px;
+        max-height: max-content;
+        height: 100%;
+        min-width: 275px;
+        margin-bottom: 0;
+        padding-top: 40px;
+        z-index: 1;
+    }
+
+    .sidebar-info {
+        flex-direction: column;
+    }
+
+    .info-content .name {
+        white-space: nowrap;
+        text-align: center;
+        font-size: var(--fs-1);
+        font-weight: var(--fw-600);
+    }
+
+    .info-content .title {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .info_more-btn {
+        display: none;
+    }
+
+    .sidebar-info_more {
+        display: inherit;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    .separator:last-of-type {
+        margin: 15px 0;
+        opacity: 0;
+    }
+
+    .theme-btn {
+        top: -35px;
+        right: -20px;
+    }
+
+}
