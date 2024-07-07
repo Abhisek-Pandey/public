@@ -233,3 +233,42 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.add("dark_theme");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch the JSON data
+  fetch('https://raw.githubusercontent.com/Abhisek-Pandey/public/master/blogs/js/BlogPostData.JSON')
+      .then(response => response.json())
+      .then(data => {
+        const indexData = data.index || []; // Use default empty array if "index" is missing
+
+        indexData.forEach(post => {
+          const element = document.getElementById(post.id);
+
+          if (element) {
+            // Update element content using template literals
+            element.innerHTML = `
+            <a href="${post.href}">
+              <figure class="blog-banner-box">
+                <img alt="${post.title}" loading="lazy" src="${post.img}">
+              </figure>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <p class="blog-category">${post.category}</p>
+                  <span class="dot"></span>
+                  <time datetime="${post.date}">${new Date(post.date).toLocaleDateString("en-US", {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric'
+            })}</time>
+                </div>
+                <h3 class="h3 blog-item-title">${post.title}</h3>
+                <p class="blog-text">
+                  ${post.text}
+                </p>
+              </div>
+            </a>
+          `;
+          }
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+});

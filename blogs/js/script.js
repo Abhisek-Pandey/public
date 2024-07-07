@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('https://raw.githubusercontent.com/Abhisek-Pandey/public/master/blogs/js/BlogPostData.JSON')
         .then(response => response.json())
         .then(data => {
-            const anchors = data.anchors;
+            const url = new URL(window.location.href);
+            const isTechnical = url.pathname.match(/\/technical\//);
+            const anchors = data[isTechnical ? "technical" : "events"] || []; // Use ternary operator
+
             if (anchors && anchors.length > 0) {
                 anchors.forEach(anchor => {
                     const element = document.getElementById(anchor.id);
@@ -22,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Update text content of <p> tag inside <a>
                         const titleElement = element.querySelector('.title');
                         if (titleElement) {
-                            titleElement.textContent += anchor.text; // Example: Append text
+                            titleElement.textContent = anchor.text;
                         }
                     }
                 });
@@ -30,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error('Error fetching anchor data:', error));
 });
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
