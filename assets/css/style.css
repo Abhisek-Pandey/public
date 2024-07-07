@@ -2099,4 +2099,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   main {
     max-width: 1550px;
   }
+
+  .timeline-text {
+    max-width: 1100px;
+  }
 }
