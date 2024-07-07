@@ -411,7 +411,7 @@ main {
 .sidebar-info {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 15px;
 }
@@ -444,6 +444,20 @@ main {
     padding: 3px 22px;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.home {
+    color: var(--color-6);
+    background: var(--color-2);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-600);
+    width: max-content;
+    padding: 3px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
 }
 
 .info_more-btn {
@@ -727,6 +741,9 @@ main {
         padding: 10px 15px;
     }
 
+    .home {
+        right: -15px;
+    }
 
     .info_more-btn ion-icon {
         display: flex;
@@ -964,6 +981,13 @@ main {
         display: none;
     }
 
+    .home {
+        position: unset;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+    }
     .sidebar-info_more {
         display: inherit;
         opacity: 1;
