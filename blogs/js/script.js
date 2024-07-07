@@ -8,7 +8,7 @@ const elementToggleFunc = function (elem) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch the JSON data
-    fetch('https://raw.githubusercontent.com/Abhisek-Pandey/public/master/BlogPostData.JSON')
+    fetch('https://raw.githubusercontent.com/Abhisek-Pandey/public/master/blogs/js/BlogPostData.JSON')
         .then(response => response.json())
         .then(data => {
             const anchors = data.anchors;
