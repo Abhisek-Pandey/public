@@ -5,6 +5,7 @@
 
     /* font-family */
     --ff-poppins: 'Poppins', sans-serif;
+    --ff-consolas: 'Consolas';
 
     /* font-size */
     --fs-1: 24px;
@@ -334,6 +335,7 @@ article.active {
 }
 
 .h5 {
+    margin-bottom: 10px;
     font-size: var(--fs-7);
     font-weight: var(--fw-600);
 }
@@ -383,6 +385,54 @@ article.active {
     width: 20px;
 }
 
+
+/*-----------------------------------*\
+  #CODE
+\*-----------------------------------*/
+
+.code {
+    border: 2px solid var(--color-8);
+    margin: 15px auto;
+    max-width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.code > h5 {
+    font-weight: var(--fw-600);
+    font-size: var(--fs-4);
+    text-align: center;
+    background: var(--color-1);
+    padding: 5px;
+}
+
+.code > p {
+    padding: 10px 30px;
+    color: rgb(101, 39, 175);
+    font-family: monospace;
+    font-weight: var(--fw-600);
+}
+
+.code > p > span {
+    color: rgba(128, 134, 139, 1);
+}
+
+.code > p > cb {
+
+    color: var(--color-9);
+}
+
+.code > p > ud {
+    color: rgba(250, 144, 62, 1);
+}
+
+.code > p > pr {
+    color: var(--color-7);
+}
+
+
+
+
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -421,7 +471,7 @@ main {
     border-radius: 20px;
     object-fit: contain;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 .avatar-box img {

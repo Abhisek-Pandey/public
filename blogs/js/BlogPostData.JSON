@@ -9,12 +9,17 @@
       "id": "BlogPost2",
       "href": "./JavaJourney.html",
       "text": "Brewing Up Your Java Journey"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./MicroservicePrinciples.html",
+      "text": "Building Robust Microservices"
     }
   ],
   "events": [
     {
       "id": "BlogPost1",
-      "href": "MakeInOdishaConclave.html",
+      "href": "./MakeInOdishaConclave.html",
       "text": "Make in Odisha Conclave 2022"
     }
   ],
@@ -36,6 +41,15 @@
       "title": "Brewing Up Your Java Journey: A Beginner's Guide",
       "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here.",
       "img": "./blogs/images/JavaJourney-1.png"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./blogs/technical/MicroservicePrinciples.html",
+      "category": "Technical Dives",
+      "date": "2024-02-20",
+      "title": "Building Robust Microservices: A Deep Dive with Design Principles",
+      "text": "Ensure scalability & fault tolerance: Design principles for microservices.",
+      "img": "./blogs/images/microservicePrinciples-1.png"
     }
   ]
 }
