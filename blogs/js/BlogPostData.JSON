@@ -14,6 +14,11 @@
       "id": "BlogPost3",
       "href": "./MicroservicePrinciples.html",
       "text": "Building Robust Microservices"
+    },
+    {
+      "id": "BlogPost4",
+      "href": "./JavaNamingConvention.html",
+      "text": "Java Naming Conventions"
     }
   ],
   "events": [
@@ -30,22 +35,13 @@
   ],
   "index": [
     {
-      "id": "BlogPost1",
+      "id": "BlogPost4",
       "href": "./blogs/technical/frameworksguide.html",
       "category": "Technical Dives",
       "date": "2023-12-01",
       "title": "Unveiling the Power of Frameworks: A Guide to Java-Based Development",
       "text": "Frameworks: Build Robust Apps Without Reinventing the Wheel, Frameworks Demystified",
       "img": "./blogs/images/FrameworkGuide-1.png"
-    },
-    {
-      "id": "BlogPost2",
-      "href": "./blogs/technical/JavaJourney.html",
-      "category": "Technical Dives",
-      "date": "2023-09-20",
-      "title": "Brewing Up Your Java Journey: A Beginner's Guide",
-      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here.",
-      "img": "./blogs/images/JavaJourney-1.png"
     },
     {
       "id": "BlogPost3",
@@ -55,6 +51,24 @@
       "title": "Building Robust Microservices: A Deep Dive with Design Principles",
       "text": "Ensure scalability & fault tolerance: Design principles for microservices.",
       "img": "./blogs/images/microservicePrinciples-1.png"
+    },
+    {
+      "id": "BlogPost2",
+      "href": "./blogs/technical/JavaNamingConvention.html",
+      "category": "Technical Dives",
+      "date": "2023-10-19",
+      "title": "Understanding and Implementing Java Naming Conventions",
+      "text": "Discover essential Java naming conventions to write cleaner, more maintainable code.",
+      "img": "./blogs/images/JavaNamingConvention-1.png"
+    },
+    {
+      "id": "BlogPost1",
+      "href": "./blogs/technical/JavaJourney.html",
+      "category": "Technical Dives",
+      "date": "2023-09-20",
+      "title": "Brewing Up Your Java Journey: A Beginner's Guide",
+      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here.",
+      "img": "./blogs/images/JavaJourney-1.png"
     }
   ]
 }
