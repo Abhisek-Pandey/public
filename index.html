@@ -942,23 +942,35 @@
                 <form class="form" data-form>
 
                     <div class="input-wrapper">
+
+                        <div class="rela">
+                            <ion-icon name="person-circle"></ion-icon>
                         <input class="form-input" data-form-input name="fullname" placeholder="Full name" required
                                autofocus type="text">
 
+                        </div>
+                        <div class="rela">
+                            <ion-icon name="mail"></ion-icon>
                         <input class="form-input" data-form-input name="email" placeholder="Email address" required
                                type="email">
+
+                        </div>
+                        <div class="rela full-width">
+                            <ion-icon name="chatbox-ellipses"></ion-icon>
+                            <textarea class="form-input" data-form-input name="message" placeholder="Your Message"
+                                      required></textarea>
+                        </div>
                     </div>
 
-                    <textarea class="form-input" data-form-input name="message" placeholder="Your Message"
-                              required></textarea>
+
 
                     <div class="form-btn-cnt">
                     <button class="form-btn" data-form-btn EMAIL disabled type="button">
-                        <ion-icon name="mail-outline"></ion-icon>
+                        <ion-icon name="mail" ></ion-icon>
                         <span email >Email</span>
                     </button>
                     <button class="form-btn" data-form-btn WHATSAPP disabled type="button">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        <ion-icon name="logo-whatsapp" style="fill: var(--color-8)"></ion-icon>
                         <span whatsapp >Message</span>
                     </button>
                     </div>
