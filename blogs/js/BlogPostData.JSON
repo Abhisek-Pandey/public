@@ -2,23 +2,23 @@
   "technical": [
     {
       "id": "BlogPost1",
-      "href": "./frameworksguide.html",
-      "text": "Unveiling the Power of Frameworks"
-    },
-    {
-      "id": "BlogPost2",
       "href": "./JavaJourney.html",
       "text": "Brewing Up Your Java Journey"
     },
     {
+      "id": "BlogPost2",
+      "href": "./JavaNamingConvention.html",
+      "text": "Java Naming Conventions"
+    },
+    {
       "id": "BlogPost3",
-      "href": "./MicroservicePrinciples.html",
-      "text": "Building Robust Microservices"
+      "href": "./frameworksguide.html",
+      "text": "Unveiling the Power of Frameworks"
     },
     {
       "id": "BlogPost4",
-      "href": "./JavaNamingConvention.html",
-      "text": "Java Naming Conventions"
+      "href": "./MicroservicePrinciples.html",
+      "text": "Building Robust Microservices"
     }
   ],
   "events": [
@@ -36,21 +36,21 @@
   "index": [
     {
       "id": "BlogPost4",
-      "href": "./blogs/technical/frameworksguide.html",
-      "category": "Technical Dives",
-      "date": "2023-12-01",
-      "title": "Unveiling the Power of Frameworks: A Guide to Java-Based Development",
-      "text": "Frameworks: Build Robust Apps Without Reinventing the Wheel, Frameworks Demystified",
-      "img": "./blogs/images/FrameworkGuide-1.png"
-    },
-    {
-      "id": "BlogPost3",
       "href": "./blogs/technical/MicroservicePrinciples.html",
       "category": "Technical Dives",
       "date": "2024-02-20",
       "title": "Building Robust Microservices: A Deep Dive with Design Principles",
       "text": "Ensure scalability & fault tolerance: Design principles for microservices.",
       "img": "./blogs/images/microservicePrinciples-1.png"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./blogs/technical/frameworksguide.html",
+      "category": "Technical Dives",
+      "date": "2023-12-01",
+      "title": "Unveiling the Power of Frameworks: A Guide to Java-Based Development",
+      "text": "Frameworks: Build Robust Apps Without Reinventing the Wheel, Frameworks Demystified",
+      "img": "./blogs/images/FrameworkGuide-1.png"
     },
     {
       "id": "BlogPost2",

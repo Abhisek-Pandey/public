@@ -239,8 +239,8 @@ body {
     border-radius: 10px;
     transition: var(--transition-1);
     position: absolute;
-    top: -13px;
-    right: 23px;
+    top: -15px;
+    right: 55px;
     box-shadow: var(--shadow-2);
     z-index: 3;
 }
@@ -499,15 +499,15 @@ main {
 .home {
     color: var(--color-6);
     background: var(--color-2);
-    font-size: var(--fs-7);
+    font-size: var(--fs-3);
     font-weight: var(--fw-600);
     width: max-content;
-    padding: 3px 15px;
+    padding: 5px;
     border-radius: 8px;
     margin-bottom: 10px;
     position: absolute;
-    top: 15px;
-    right: 0px;
+    top: -13px;
+    right: 23px;
 }
 
 .info_more-btn {
@@ -792,7 +792,9 @@ main {
     }
 
     .home {
-        right: -15px;
+        top: -27px;
+        right: 20px;
+        font-size: var(--fs-4);
     }
 
     .info_more-btn ion-icon {
@@ -800,10 +802,10 @@ main {
     }
 
     .theme-btn {
-        top: -27px;
-        right: 20px;
+        top: -28px;
+        right: 55px;
         padding: 5px 5px;
-        width: 45px;
+        width: 40px;
     }
 
     .theme-btn .icon {
