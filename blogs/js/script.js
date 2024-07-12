@@ -58,12 +58,12 @@ themeToggleBtn.addEventListener("click", function () {
     if (themeToggleBtn.classList.contains("active")) {
         document.body.classList.remove("dark_theme");
         document.body.classList.add("light_theme");
-
+        document.getElementById("icon").setAttribute("name", "sunny");
         localStorage.setItem("theme", "light_theme");
     } else {
         document.body.classList.add("dark_theme");
         document.body.classList.remove("light_theme");
-
+        document.getElementById("icon").setAttribute("name", "moon");
         localStorage.setItem("theme", "dark_theme");
     }
 
@@ -75,10 +75,12 @@ themeToggleBtn.addEventListener("click", function () {
 if (localStorage.getItem("theme") === "light_theme") {
     themeToggleBtn.classList.add("active");
     document.body.classList.remove("dark_theme");
+    document.getElementById("icon").setAttribute("name", "sunny");
     document.body.classList.add("light_theme");
 } else {
     themeToggleBtn.classList.remove("active");
     document.body.classList.remove("light_theme");
+    document.getElementById("icon").setAttribute("name", "moon");
     document.body.classList.add("dark_theme");
 }
 

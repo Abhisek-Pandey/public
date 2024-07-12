@@ -202,7 +202,7 @@ input, textarea {
   color: var(--color-8);
 }
 
-:focus { outline-color: var(--color-8); }
+
 
 html { font-family: var(--ff-poppins); }
 
@@ -215,7 +215,7 @@ body { background: var(--color-5); }
 
 .theme-btn {
   padding: 4px;
-  width: 40px;
+  width: max-content;
   background: var(--color-1);
   border-radius: 10px;
   transition: var(--transition-1);
@@ -226,37 +226,13 @@ body { background: var(--color-5); }
   z-index: 3;
 }
 
-
-.theme-btn .icon {
-  position: relative;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  box-shadow: inset 4.5px -4px var(--color-8);
-  transition: var(--transition-1);
+.theme-btn #icon  {
+  color: var(--color-8);
 }
 
-.theme-btn.active .icon {
-  left: 20px;
-  box-shadow: inset 20px -20px var(--color-5);
-}
+.theme-btn:hover{ background: var(--linear-gradient-3); }
 
-.theme-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--linear-gradient-2);
-  transition: var(--transition-1);
-  z-index: -1;
-}
-
-.theme-btn:hover,
-.theme-btn:focus { background: var(--linear-gradient-3); }
-
-.theme-btn:hover::before,
-.theme-btn:focus::before { background: var(--linear-gradient-4); }
+.theme-btn:hover::before{ background: var(--linear-gradient-4); }
 
 
 /*-----------------------------------*\
@@ -525,11 +501,9 @@ main {
   z-index: -1;
 }
 
-.info_more-btn:hover,
-.info_more-btn:focus { background: var(--linear-gradient-3); }
+.info_more-btn:hover { background: var(--linear-gradient-3); }
 
-.info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--linear-gradient-4); }
+.info_more-btn:hover::before{ background: var(--linear-gradient-4); }
 
 .info_more-btn span { display: none; }
 
@@ -1544,13 +1518,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     top: -25px;
     right: 100px;
     padding: 5px 5px;
-    width: 45px;
   }
 
-  .theme-btn .icon {
-    width: 18px;
-    height: 18px;
-  }
 
   .separator { margin: 32px 0; }
 
@@ -2085,6 +2054,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .theme-btn{
     top: -50px;
     right: -20px;
+    font-size: var(--fs-3);
   }
 
   /**
