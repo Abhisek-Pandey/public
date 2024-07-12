@@ -84,3 +84,21 @@ if (localStorage.getItem("theme") === "light_theme") {
     document.body.classList.add("dark_theme");
 }
 
+let ascending = false;
+
+function sortPosts() {
+    const list = document.querySelector('.blog-posts-list');
+    const items = Array.from(list.querySelectorAll('.blog-post-item'));
+
+    items.sort((a, b) => {
+        const dateA = new Date(a.querySelector('time').getAttribute('datetime'));
+        const dateB = new Date(b.querySelector('time').getAttribute('datetime'));
+
+        return ascending ? dateB - dateA : dateA - dateB;
+    });
+
+    ascending = !ascending;
+
+    items.forEach(item => list.appendChild(item));
+}
+

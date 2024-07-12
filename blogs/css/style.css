@@ -338,6 +338,30 @@ article.active {
     background: var(--linear-gradient-6);
     border-radius: 3px;
 }
+.function-bar   {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+.sort-button    {
+    padding: 4px;
+    width: max-content;
+    background: var(--color-1);
+    border-radius: 10px;
+    transition: var(--transition-1);
+    box-shadow: var(--shadow-2);
+    z-index: 3;
+    margin: 1px;
+    color: var(--color-8);
+    font-size: var(--fs-4);
+}
+
+.sort-button:hover{ background: var(--linear-gradient-3); }
+
+.sort-button:hover::before{ background: var(--linear-gradient-4); }
 
 .has-scrollbar::-webkit-scrollbar {
     width: 5px; /* for vertical scrollbar */
