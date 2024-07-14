@@ -93,7 +93,9 @@ ol > li {
     right: 55px;
     margin: 1px;
 }
-
+.theme-button #icon  {
+    color: var(--color-8);
+}
 
 
 /*-----------------------------------*\

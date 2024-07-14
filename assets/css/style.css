@@ -108,7 +108,7 @@ body.light_theme {
   /* solid */
 
   --color-1: hsla(43, 69%, 59%, 1);
-  --color-2: hsla(43, 60%, 70%, 1);
+  --color-2: hsla(43, 60%, 50%, 1);
   --color-3: hsla(43, 64%, 75%, 1);
   --color-4: hsla(43, 64%, 80%, 1);
   --color-5: hsla(43, 64%, 88%, 1);
@@ -118,7 +118,7 @@ body.light_theme {
   --color-9: hsla(202, 95%, 18%, 1);
   --color-10: hsla(202, 35%, 28%, 1);
   --color-10-70: hsla(175, 20%, 18%, 0.9);
-  --color-12:hsla(187, 32%, 41%, 1);
+  --color-12:hsla(175, 20%, 68%, 0.75);
 
 
 }
@@ -1928,12 +1928,12 @@ textarea.form-input::-webkit-resizer { display: none; }
    * RESET
    */
 
-  body::-webkit-scrollbar { width: 20px; }
+  body::-webkit-scrollbar { width: 10px; }
 
   body::-webkit-scrollbar-track { background: var(--color-5); }
 
   body::-webkit-scrollbar-thumb {
-    border: 5px solid var(--color-5);
+    border: 1px solid var(--color-1);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
