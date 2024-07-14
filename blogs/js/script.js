@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error('Error fetching anchor data:', error));
 });
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+// navigation variables
+const navigation = document.querySelector("[data-navigation]");
+const navigationBtn = document.querySelector("[data-navigation-btn]");
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () {
-    elementToggleFunc(sidebar);
+// navigation toggle functionality for mobile
+navigationBtn.addEventListener("click", function () {
+    elementToggleFunc(navigation);
 });
 
 
@@ -49,7 +49,7 @@ if (localStorage.getItem("theme") === null) {
 }
 
 
-const themeToggleBtn = document.querySelector("[data-theme-btn]");
+const themeToggleBtn = document.querySelector("[data-theme-button]");
 
 themeToggleBtn.addEventListener("click", function () {
 
