@@ -19,6 +19,11 @@
       "id": "BlogPost4",
       "href": "./MicroservicePrinciples.html",
       "text": "Building Robust Microservices"
+    },
+    {
+      "id": "BlogPost5",
+      "href": "./AgileMethodology.html",
+      "text": "Agile Manifesto: A Beginner's Guide"
     }
   ],
   "events": [
@@ -34,6 +39,15 @@
     }
   ],
   "index": [
+    {
+      "id": "BlogPost5",
+      "href": "./blogs/technical/AgileMethodology.html",
+      "category": "Technical Dives",
+      "date": "2024-03-15",
+      "title": "Agile Manifesto: A Beginner's Guide to Conquering Projects with Flexibility",
+      "text": "Turn your project management up a notch: Embrace Agile Methodology.",
+      "img": "./blogs/images/AgileMethodology-1.png"
+    },
     {
       "id": "BlogPost4",
       "href": "./blogs/technical/MicroservicePrinciples.html",
