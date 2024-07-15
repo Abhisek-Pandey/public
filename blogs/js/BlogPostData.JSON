@@ -43,18 +43,18 @@
       "id": "BlogPost5",
       "href": "./blogs/technical/AgileMethodology.html",
       "category": "Technical Dives",
-      "date": "2024-03-15",
+      "date": "2024-02-15",
       "title": "Agile Manifesto: A Beginner's Guide to Conquering Projects with Flexibility",
-      "text": "Turn your project management up a notch: Embrace Agile Methodology.",
+      "text": "Turn your project management up a notch: Embrace Agile Methodology",
       "img": "./blogs/images/AgileMethodology-1.png"
     },
     {
       "id": "BlogPost4",
       "href": "./blogs/technical/MicroservicePrinciples.html",
       "category": "Technical Dives",
-      "date": "2024-02-20",
+      "date": "2024-01-20",
       "title": "Building Robust Microservices: A Deep Dive with Design Principles",
-      "text": "Ensure scalability & fault tolerance: Design principles for microservices.",
+      "text": "Ensure scalability & fault tolerance: Design principles for microservices",
       "img": "./blogs/images/microservicePrinciples-1.png"
     },
     {
@@ -72,7 +72,7 @@
       "category": "Technical Dives",
       "date": "2023-10-19",
       "title": "Understanding and Implementing Java Naming Conventions",
-      "text": "Discover essential Java naming conventions to write cleaner, more maintainable code.",
+      "text": "Discover essential Java naming conventions to write cleaner, more maintainable code",
       "img": "./blogs/images/JavaNamingConvention-1.png"
     },
     {
@@ -81,7 +81,7 @@
       "category": "Technical Dives",
       "date": "2023-09-20",
       "title": "Brewing Up Your Java Journey: A Beginner's Guide",
-      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here.",
+      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here",
       "img": "./blogs/images/JavaJourney-1.png"
     }
   ]
