@@ -210,6 +210,11 @@ article {
   margin: 16px 0;
 }
 
+.circle-list  {
+  list-style: circle;
+  margin-left: 15px;
+}
+
 .icon-box {
   position: relative;
   background: var(--linear-gradient-5);

@@ -1,29 +1,29 @@
 {
   "technical": [
     {
-      "id": "BlogPost1",
-      "href": "./JavaJourney.html",
-      "text": "Brewing Up Your Java Journey"
-    },
-    {
-      "id": "BlogPost2",
+      "id": "BlogPost5",
       "href": "./JavaNamingConvention.html",
       "text": "Java Naming Conventions"
     },
     {
-      "id": "BlogPost3",
+      "id": "BlogPost4",
       "href": "./frameworksguide.html",
       "text": "Unveiling the Power of Frameworks"
     },
     {
-      "id": "BlogPost4",
+      "id": "BlogPost3",
       "href": "./MicroservicePrinciples.html",
       "text": "Building Robust Microservices"
     },
     {
-      "id": "BlogPost5",
+      "id": "BlogPost2",
       "href": "./AgileMethodology.html",
       "text": "Agile Manifesto: A Beginner's Guide"
+    },
+    {
+      "id": "BlogPost1",
+      "href": "./VersionControl.html",
+      "text": "Understanding Version Control"
     }
   ],
   "events": [
@@ -44,6 +44,15 @@
     }
   ],
   "index": [
+    {
+      "id": "BlogPost6",
+      "href": "./blogs/technical/VersionControl.html",
+      "category": "Technical Dives",
+      "date": "2024-03-19",
+      "title": "Understanding Version Control: Git and GitHub",
+      "text": "Unlock the full potential of version control with our comprehensive guide to Git and GitHub.",
+      "img": "./blogs/images/VersionControl-1.png"
+    },
     {
       "id": "BlogPost5",
       "href": "./blogs/technical/AgileMethodology.html",
