@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        Building Robust Microservices: A Deep Dive with Design Principles
+    </title>
+
+    <!--
+      - favicon
+    -->
+    <link href="../images/logo.svg" rel="shortcut icon" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!--
+      - google font link
+    -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="light_theme">
+
+<main>
+
+    <aside class="navigation" data-navigation>
+
+        <div class="navigation-info">
+
+            <div class="menu-content">
+                <h1 class="name" title="BLOGS">BLOGS</h1>
+            </div>
+
+            <button class="home">
+                <a href="https://abhisek-pandey.github.io/public/"><ion-icon name="home"></ion-icon></a>
+            </button>
+
+            <button class="theme-button" aria-label="Change Theme" title="Change Theme" data-theme-button>
+                <ion-icon id="icon" name="sunny"></ion-icon>
+            </button>
+
+            <button class="menu_more-btn" data-navigation-btn>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
+        </div>
+
+        <div class="navigation-info_more">
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="./TechnicalDives.html"><p class="title">Technical Dives</p></a>
+            </div>
+
+            <div class="menu-content">
+                <a href="../event/EventAndSocial.html"><p class="title">Events & Social</p></a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost1">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost2">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost3">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost4">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost5">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div class="main-content">
+        <article class="blog  active" data-page="blog">
+
+            <header>
+                <h2 class="h2 article-title">
+                    Building Robust Microservices: A Deep Dive with Design Principles</h2>
+            </header>
+
+            <section class="blog-text">
+                <p>
+                    The microservices architecture has revolutionized software development, enabling modularity,
+                    scalability, and faster development cycles. However, building robust and maintainable microservices
+                    requires a strong foundation in design principles. This blog post dives into several key principles
+                    that will guide you in crafting well-encapsulated, loosely coupled, and scalable microservices.
+                </p>
+                <figure class="image-box">
+                    <img alt="Blog Image" src="../images/microservicePrinciples-1.png">
+                </figure>
+                <h5 class="h5">
+                    Here's how key design principles can help you craft robust and fault-tolerant microservices:
+                </h5>
+                <h4 class="h4">
+                    Single Responsibility Principle (SRP):
+                </h4>
+                <p>
+                    Imagine a microservice that handles both user authentication and order processing. A change to
+                    authenticate a new login method would also require modifying the order processing code. SRP dictates
+                    that each microservice should have a single, well-defined responsibility.
+                </p>
+                <p>
+                    This promotes:
+                <ul>
+                    <li><b>Modularity:</b> SRP breaks down complex functionalities into smaller, well-defined units,
+                        making code
+                        easier to understand and manage.
+                    </li>
+                    <li><b>Maintainability:</b> Changes to one service's functionality have minimal impact on others,
+                        reducing the
+                        risk of unintended consequences and simplifying maintenance.
+                    </li>
+                    <li><b>Testability:</b> Smaller, focused services are easier to test in isolation, improving overall
+                        code
+                        quality.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">Sample:</h4>
+                <p>
+                    <b>Problem:</b> A monolithic "UserService" class handles both user authentication and order
+                    processing. A change to one functionality would require modifying the code for the other.
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (SRP Violation)
+                    </h5>
+                    <p>
+                        public class
+                        <ud>UserService</ud>
+                        <cb>{</cb>
+                        <br>
+                        public boolean
+                        <ud>authenticate</ud>
+                        <pr>(String username, String password)</pr>
+                        <cb>{</cb>
+                        <br>
+                        <span>// Authentication logic</span>
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public void
+                        <ud>placeOrder</ud>
+                        <pr>(Order order)</pr>
+                        <cb>{</cb>
+                        <br>
+                        <span>// Order processing logic</span>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+
+                    </p>
+                </div>
+                <p>
+                    <b>Solution:</b> Break down the functionalities into separate services.
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (SRP Applied)
+                    </h5>
+                    <p>
+                        public class
+                        <ud>AuthenticationService</ud>
+                        <cb>{</cb>
+                        <br>
+                        public boolean
+                        <ud>authenticate</ud>
+                        <pr>(String username, String password)</pr>
+                        <cb>{</cb>
+                        <br>
+                        <span>// Authentication logic</span>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public class
+                        <ud>OrderService</ud>
+                        <cb>{</cb>
+                        <br>
+                        public void
+                        <ud>placeOrder</ud>
+                        <pr>(Order order)</pr>
+                        <cb>{</cb>
+                        <br>
+                        <span>// Order processing logic</span>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+
+
+                    </p>
+                </div>
+                <h4 class="h4">
+                    Loose Coupling:
+                </h4>
+                <p>
+                    Tightly coupled services rely heavily on each other's internal implementation details. A change in
+                    one service's code might break functionality in another. Loose coupling, on the other hand, promotes
+                    independence. Services interact through well-defined interfaces (like APIs), allowing for changes in
+                    one service without affecting others.
+                </p>
+                <p>
+                    This facilitates:
+                <ul>
+                    <li><b>Independent Development and Deployment:</b> Teams can develop and deploy services
+                        independently,
+                        accelerating development cycles.
+                    </li>
+                    <li><b>Scalability:</b> Services can scale independently based on their specific needs.</li>
+                    <li><b>Flexibility:</b> New services can be integrated more easily as they only need to adhere to
+                        the defined
+                        interface.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">Sample:</h4>
+                <p>
+                    <b>Problem:</b> A "ProductService" directly interacts with a specific database implementation class.
+                    Changes to the database technology would require modifying the "ProductService" code.<br>
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (Tight Coupling)
+                    </h5>
+                    <p>
+                        public class
+                        <ud>ProductService</ud>
+                        <cb>{</cb>
+                        <br>
+                        private MyDatabaseService
+                        <ud>databaseService</ud>
+                        = new MyDatabaseService();<br>
+                        <br>
+                        public Product
+                        <ud>getProductById</ud>
+                        <pr>(long id)</pr>
+                        </ud>
+                        <cb>{</cb>
+                        <br>
+                        return databaseService.
+                        <ud>getProductById</ud>
+                        (id);<br>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+
+                    </p>
+                </div>
+                <p>
+                    <b>Solution:</b> Use interfaces to define the data access layer.
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (Tight Coupling)
+                    </h5>
+                    <p>
+                        public interface
+                        <ud>DatabaseService</ud>
+                        <cb>{</cb>
+                        <br>
+                        Product
+                        <ud>getProductById</ud>
+                        <pr>(long id)</pr>
+                        ;
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public class
+                        <ud>ProductService</ud>
+                        <cb>{</cb>
+                        <br>
+                        private DatabaseService
+                        <ud>databaseService</ud>
+                        ;
+                        <br>
+                        public
+                        <ud>ProductService</ud>
+                        <pr>(DatabaseService databaseService)</pr>
+                        <cb>{</cb>
+                        <br>
+                        this.databaseService =
+                        <ud>databaseService</ud>
+                        ;
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public Product
+                        <ud>getProductById</ud>
+                        <pr>(long id)</pr>
+                        <cb>{</cb>
+                        <br>
+                        return databaseService.
+                        <ud>getProductById</ud>
+                        <pr>(id)</pr>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+
+                    </p>
+                </div>
+                <h4 class="h4">
+                    Open-Closed Principle (OCP):
+                </h4>
+                <p>
+                    Imagine a "ShoppingCartService" needing new functionalities like adding coupons or loyalty points.
+                    OCP suggests designing the service to accommodate extensions through inheritance or composition,
+                    without altering existing code.</p>
+                <p>
+                    This allows for:
+                <ul>
+                    <li><b>Extensibility:</b> New features can be added without modifying existing code, reducing the
+                        risk of
+                        regressions.
+                    </li>
+                    <li><b>Maintainability:</b> Code remains clean and focused, making it easier to understand and
+                        maintain over
+                        time.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">Sample:</h4>
+                <p>
+                    <b>Problem:</b> A "ShoppingCartService" needs a new functionality to apply coupons. Modifying the
+                    existing code might introduce bugs.
+                    <br>
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (OCP Violation)
+                    </h5>
+                    <p>
+                        public class
+                        <ud>ShoppingCartService</ud>
+                        <cb>{</cb>
+                        <br>
+                        public double
+                        <ud>calculateTotal</ud>
+                        <pr>(List &#60Item&#62 items)</pr>
+                        <cb>{</cb>
+                        <br><br>
+                        double
+                        <ud>total</ud>
+                        = 0;<br>
+                        for (Item
+                        <ud>item</ud>
+                        : items)
+                        <cb>{</cb>
+                        <br>
+                        <ud>total</ud>
+                        += item.getPrice
+                        <pr>()</pr>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        return
+                        <ud>total</ud>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+
+                    </p>
+                </div>
+                <p>
+                    <b>Solution:</b> Use interfaces to define the data access layer.
+                </p>
+                <div class="code">
+                    <h5>
+                        Java Code Example (OCP applied)
+                    </h5>
+                    <p>
+
+                        public interface
+                        <ud>ShoppingCartDecorator</ud>
+                        <cb>{</cb>
+                        <br>
+                        double
+                        <ud>decorateTotal</ud>
+                        <pr>(double total)</pr>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public class
+                        <ud>ShoppingCartService</ud>
+                        <cb>{</cb>
+                        <br>
+                        public double
+                        <ud>calculateTotal</ud>
+                        <pr>(List
+                            &#60Item&#62 items, List
+                            &#60ShoppingCartDecorator&#62 decorators)
+                        </pr>
+                        <cb>{</cb>
+                        <br>
+                        double
+                        <ud>total</ud>
+                        = 0;<br>
+                        for
+                        <pr>(Item
+                            <ud>item</ud>
+                            : items)
+                        </pr>
+                        <cb>{</cb>
+                        <br>
+                        <ud>total</ud>
+                        += item.getPrice
+                        <pr>()</pr>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        for
+                        <pr>(ShoppingCartDecorator
+                            <ud>decorator</ud>
+                            : decorators)
+                        </pr>
+                        <cb>{</cb>
+                        <br>
+                        total = decorator.decorateTotal
+                        <pr>(total)</pr>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        return
+                        <ud>total</ud>
+                        ;<br>
+                        <cb>}</cb>
+                        <br>
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        public class
+                        <ud>CouponDecorator</ud>
+                        implements
+                        <ud>ShoppingCartDecorator</ud>
+                        <cb>{</cb>
+                        <br>
+                        private final double
+                        <ud>discount</ud>
+                        ;<br>
+                        <br>
+                        public
+                        <ud>CouponDecorator</ud>
+                        <pr>(double discount)</pr>
+                        <cb>{</cb>
+                        <br>
+                        this.discount = discount;<br>
+                        <cb>}</cb>
+                        <br>
+                        <br>
+                        @Override<br>
+                        public double
+                        <ud>decorateTotal</ud>
+                        <pr>(double total)</pr>
+                        <cb>{</cb>
+                        <br>
+                        return
+                        <ud>total</ud>
+                        -
+                                <ud>discount</ud>
+                                ;<br>
+                                <cb>}</cb>
+                                <br>
+                                <cb>}</cb>
+                                <br>
+
+
+                    </p>
+                </div>
+                <h4 class="h4">
+                    Designing Scalable Microservices:
+                </h4>
+                <p>
+                    The <b>SOLID</b> principles (Single Responsibility, Open-Closed, Liskov Substitution, Interface
+                    Segregation, Dependency Inversion) are fundamental to designing scalable microservices.
+                </p>
+                <p>
+                    Here's how some of them contribute:
+                <ul>
+                    <li><b>Single Responsibility (SRP):</b> Promotes modularity, allowing independent scaling of
+                        services
+                        based on
+                        specific functionalities.
+                    </li>
+                    <li><b>Open-Closed (OCP):</b> Enables adding new features without code rewrites, ensuring
+                        scalability for
+                        future requirements.
+                    </li>
+                    <li><b>Interface Segregation (ISP):</b> Encourages smaller, specific interfaces rather than bulky
+                        ones.
+                        Services can depend on only the functionalities they need, improving maintainability and
+                        scalability
+                        as new features are added.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">
+                    Building Fault-Tolerant Microservices with Sam Newman's Principles:
+                </h4>
+                <p>
+                    <b>Sam Newman's principles</b> guide building microservices that can withstand failures and maintain
+                    overall system functionality.
+                </p>
+                <p>
+                    These principles include:
+                <ul>
+                    <li><b>Resilience:</b> Services should handle failures gracefully, like timeouts and retries,
+                        preventing
+                        cascading failures across the system.
+                    </li>
+                    <li><b>Responsibility Isolation:</b> Each service owns its failures through proper error handling
+                        and recovery
+                        mechanisms, preventing issues in one service from impacting others.
+                    </li>
+                    <li><b>Evolutionary Design:</b> Services evolve independently, allowing for experimentation and
+                        updates without
+                        affecting the entire system.
+                    </li>
+                    <li><b>Separate Deployment:</b> Services deploy independently, facilitating faster deployments and
+                        rollbacks in
+                        case of issues.
+                    </li>
+                    <li><b>Bounded Contexts:</b> Define clear boundaries around service functionality to avoid conflicts
+                        and ensure
+                        clear ownership of data and logic.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">
+                    Clean Architecture for Microservices:
+                </h4>
+                <p>
+                    Clean Architecture emphasizes separation of concerns and business logic independence. This
+                    translates to designing microservices with a clear separation between the user interface (UI),
+                    business rules, and data access layers.
+                </p>
+                <p>
+                    This promotes:
+                <ul>
+                    <li><b>Loose Coupling:</b> Services become independent of specific UI technologies or data storage
+                        mechanisms.
+                    </li>
+                    <li><b>Testability:</b> Business logic can be easily tested in isolation from the UI or data access
+                        layers.
+                    </li>
+                    <li><b>Maintainability:</b> UI and business logic updates can be made independently without
+                        impacting each
+                        other.
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    In conclusion, mastering design principles is crucial for building robust microservices. By adhering
+                    to principles like SRP, Loose Coupling, and OCP, you ensure well-defined, independent, and
+                    extensible services. Remember, leveraging SOLID principles for scalability and embracing Sam
+                    Newman's practices for fault tolerance further solidify your microservices architecture. Finally,
+                    adopting Clean Architecture principles promotes loose coupling, testability, and maintainability.
+                </p>
+                <p>
+                    By understanding and applying these principles, you can craft microservices that are not only
+                    functional but also resilient, adaptable, and ready to evolve alongside your application's needs.
+                    So, embrace these design principles and embark on a journey towards building robust and future-proof
+                    microservices!
+
+                </p>
+
+            </section>
+
+        </article>
+    </div>
+</main>
+
+
+<!--
+  - custom js link
+-->
+<script src="../js/script.js"></script>
+
+<!--
+  - ionicon link
+-->
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

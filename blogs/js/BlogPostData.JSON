@@ -1,0 +1,102 @@
+{
+  "technical": [
+    {
+      "id": "BlogPost5",
+      "href": "./JavaNamingConvention.html",
+      "text": "Java Naming Conventions"
+    },
+    {
+      "id": "BlogPost4",
+      "href": "./frameworksguide.html",
+      "text": "Unveiling the Power of Frameworks"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./MicroservicePrinciples.html",
+      "text": "Building Robust Microservices"
+    },
+    {
+      "id": "BlogPost2",
+      "href": "./AgileMethodology.html",
+      "text": "Agile Manifesto: A Beginner's Guide"
+    },
+    {
+      "id": "BlogPost1",
+      "href": "./VersionControl.html",
+      "text": "Understanding Version Control"
+    }
+  ],
+  "events": [
+    {
+      "id": "BlogPost1",
+      "href": "./MakeInOdishaConclave.html",
+      "text": "Make in Odisha Conclave 2022"
+    },
+    {
+      "id": "BlogPost2",
+      "href": "./7DayCommunicationCourse.html",
+      "text": "Communication Skills Development Camp"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./LeoniaResort.html",
+      "text": "Trip to Leonia Resort"
+    }
+  ],
+  "index": [
+    {
+      "id": "BlogPost6",
+      "href": "./blogs/technical/VersionControl.html",
+      "category": "Technical Dives",
+      "date": "2024-03-19",
+      "title": "Understanding Version Control: Git and GitHub",
+      "text": "Unlock the full potential of version control with our comprehensive guide to Git and GitHub.",
+      "img": "./blogs/images/VersionControl-1.png"
+    },
+    {
+      "id": "BlogPost5",
+      "href": "./blogs/technical/AgileMethodology.html",
+      "category": "Technical Dives",
+      "date": "2024-02-15",
+      "title": "Agile Manifesto: A Beginner's Guide to Conquering Projects with Flexibility",
+      "text": "Turn your project management up a notch: Embrace Agile Methodology",
+      "img": "./blogs/images/AgileMethodology-1.png"
+    },
+    {
+      "id": "BlogPost4",
+      "href": "./blogs/technical/MicroservicePrinciples.html",
+      "category": "Technical Dives",
+      "date": "2024-01-20",
+      "title": "Building Robust Microservices: A Deep Dive with Design Principles",
+      "text": "Ensure scalability & fault tolerance: Design principles for microservices",
+      "img": "./blogs/images/microservicePrinciples-1.png"
+    },
+    {
+      "id": "BlogPost3",
+      "href": "./blogs/technical/frameworksguide.html",
+      "category": "Technical Dives",
+      "date": "2023-12-01",
+      "title": "Unveiling the Power of Frameworks: A Guide to Java-Based Development",
+      "text": "Frameworks: Build Robust Apps Without Reinventing the Wheel, Frameworks Demystified",
+      "img": "./blogs/images/FrameworkGuide-1.png"
+    },
+    {
+      "id": "BlogPost2",
+      "href": "./blogs/technical/JavaNamingConvention.html",
+      "category": "Technical Dives",
+      "date": "2023-10-19",
+      "title": "Understanding and Implementing Java Naming Conventions",
+      "text": "Discover essential Java naming conventions to write cleaner, more maintainable code",
+      "img": "./blogs/images/JavaNamingConvention-1.png"
+    },
+    {
+      "id": "BlogPost1",
+      "href": "./blogs/technical/JavaJourney.html",
+      "category": "Technical Dives",
+      "date": "2023-09-20",
+      "title": "Brewing Up Your Java Journey: A Beginner's Guide",
+      "text": "Your cup of Java awaits. Unlock a rewarding career path: Your journey to becoming a Java developer starts here",
+      "img": "./blogs/images/JavaJourney-1.png"
+    }
+  ]
+}

@@ -6,6 +6,86 @@
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
+if (localStorage.getItem("theme") === null) {
+  localStorage.setItem("theme", "light_theme"); // or "dark_theme" based on default
+}
+
+
+
+const themeToggleBtn = document.querySelector("[data-theme-btn]");
+
+themeToggleBtn.addEventListener("click", function () {
+
+  elementToggleFunc(themeToggleBtn);
+
+  if (themeToggleBtn.classList.contains("active")) {
+    document.body.classList.remove("dark_theme");
+    document.body.classList.add("light_theme");
+    document.getElementById("icon").setAttribute("name", "sunny");
+    localStorage.setItem("theme", "light_theme");
+  } else {
+    document.body.classList.add("dark_theme");
+    document.body.classList.remove("light_theme");
+    document.getElementById("icon").setAttribute("name", "moon");
+    localStorage.setItem("theme", "dark_theme");
+  }
+
+});
+
+/**
+ * check & apply last time selected theme from localStorage
+ */
+if (localStorage.getItem("theme") === "light_theme") {
+  themeToggleBtn.classList.add("active");
+  document.body.classList.remove("dark_theme");
+  document.getElementById("icon").setAttribute("name", "sunny");
+  document.body.classList.add("light_theme");
+} else {
+  themeToggleBtn.classList.remove("active");
+  document.body.classList.remove("light_theme");
+  document.getElementById("icon").setAttribute("name", "moon");
+  document.body.classList.add("dark_theme");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch the JSON data
+  fetch('https://raw.githubusercontent.com/Abhisek-Pandey/public/master/blogs/js/BlogPostData.JSON')
+      .then(response => response.json())
+      .then(data => {
+        const indexData = data.index || []; // Use default empty array if "index" is missing
+
+        indexData.forEach(post => {
+          const element = document.getElementById(post.id);
+
+          if (element) {
+            // Update element content using template literals
+            element.innerHTML = `
+            <a href="${post.href}">
+              <figure class="blog-banner-box">
+                <img alt="${post.title}" loading="lazy" src="${post.img}">
+              </figure>
+              <div class="blog-content">
+                <div class="blog-meta">
+                  <p class="blog-category">${post.category}</p>
+                  <span class="dot"></span>
+                  <time datetime="${post.date}">${new Date(post.date).toLocaleDateString("en-US", {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric'
+            })}</time>
+                </div>
+                <h3 class="h3 blog-item-title">${post.title}</h3>
+                <p class="blog-text">
+                  ${post.text}
+                </p>
+              </div>
+            </a>
+          `;
+          }
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+});
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -140,7 +220,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formBtn = document.querySelectorAll("[data-form-btn]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -148,9 +228,13 @@ for (let i = 0; i < formInputs.length; i++) {
 
     // check form validation
     if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
+      for (let i = 0; i < formBtn.length; i++) {
+        formBtn[i].removeAttribute("disabled");
+      }
     } else {
-      formBtn.setAttribute("disabled", "");
+      for (let i = 0; i < formBtn.length; i++) {
+        formBtn[i].removeAttribute("disabled");
+      }
     }
 
   });
@@ -179,4 +263,38 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+//mail or message check
+document.querySelector("[EMAIL]").addEventListener('click', function() {
+  const fullname = 'Message From '+document.querySelector('input[name="fullname"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  const mailtoLink = `mailto:pandey240600@gmail.com?subject=${fullname}&body=${encodeURIComponent('Email: "' + email + '" wants ' +
+      'to convey that: ' + message)}`;
+  window.open(mailtoLink, '_blank')
+});
+
+document.querySelector("[WHATSAPP]").addEventListener('click', function() {
+  const fullname = document.querySelector('input[name="fullname"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  const whatsappLink = `https://api.whatsapp.com/send?phone=917992624218&text=${encodeURIComponent('*Name:* ' + fullname + 
+      '\n*Email:* ' + email + '\n*Message:* ' + message)}`;
+  window.open(whatsappLink, '_blank');
+});
+
+
+//loading screen timer
+const loadingScreen = document.querySelector('.loading');
+const main = document.querySelector('main');
+
+setTimeout(() => {
+  loadingScreen.remove();
+}, 2000);
+
+
+
 

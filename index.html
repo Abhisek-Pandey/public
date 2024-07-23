@@ -17,6 +17,7 @@
     -->
     <link href="./assets/css/style.css" rel="stylesheet">
 
+
     <!--
       - google font link
     -->
@@ -25,8 +26,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
+<body class="light_theme">
+<!--
+  - #Loading Screen
+-->
+<div class="loading">
+    <img src="./assets/images/logo.svg" alt="Loading Logo" />
+</div>
 <!--
   - #MAIN
 -->
@@ -53,9 +59,11 @@
                 <p class="title">Software Developer</p>
             </div>
 
+            <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+                <ion-icon id="icon" name="sunny"></ion-icon>
+            </button>
             <button class="info_more-btn" data-sidebar-btn>
                 <span>Show Contacts</span>
-
                 <ion-icon name="chevron-down"></ion-icon>
             </button>
 
@@ -270,8 +278,8 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="design icon" src="./assets/images/icon-design.svg
-                " width="40">
+                            <img alt="design icon" src="./assets/images/light/icon-design.svg" width="40" class="light">
+                            <img alt="design icon" src="./assets/images/dark/icon-design.svg" width="40" class="dark">
                         </div>
 
                         <div class="service-content-box">
@@ -288,7 +296,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="Web development icon" src="./assets/images/icon-dev.svg" width="40">
+
                         </div>
 
                         <div class="service-content-box">
@@ -304,7 +312,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="mobile app icon" src="./assets/images/icon-app.svg" width="40">
+
                         </div>
 
                         <div class="service-content-box">
@@ -320,7 +328,8 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="camera icon" src="./assets/images/icon-photo.svg" width="40">
+                            <img alt="camera icon" src="./assets/images/light/icon-photo.svg" width="40" class="light">
+                            <img alt="camera icon" src="./assets/images/dark/icon-photo.svg" width="40" class="dark">
                         </div>
 
                         <div class="service-content-box">
@@ -477,7 +486,8 @@
                             <img alt="Daniel lewis" data-modal-img src="./assets/images/avatar-1.png" width="80">
                         </figure>
 
-                        <img alt="quote icon" src="./assets/images/icon-quote.svg">
+                        <img alt="quote icon" src="./assets/images/light/icon-quote.svg" class="light">
+                        <img alt="quote icon" src="./assets/images/dark/icon-quote.svg" class="dark">
                     </div>
 
                     <div class="modal-content">
@@ -504,56 +514,6 @@
 
             </div>
 
-
-            <!--
-              - clients
-            -->
-
-            <section class="clients">
-
-                <h3 class="h3 clients-title">Clients</h3>
-
-                <ul class="clients-list has-scrollbar">
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-1-color.png">
-                        </a>
-                    </li>
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-2-color.png">
-                        </a>
-                    </li>
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-3-color.png">
-                        </a>
-                    </li>
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-4-color.png">
-                        </a>
-                    </li>
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-5-color.png">
-                        </a>
-                    </li>
-
-                    <li class="clients-item">
-                        <a href="#">
-                            <img alt="client logo" src="./assets/images/logo-6-color.png">
-                        </a>
-                    </li>
-
-                </ul>
-
-            </section>
 
         </article>
 
@@ -778,6 +738,10 @@
                         <button data-filter-btn value="Internet of things">Internet of Things</button>
                     </li>
 
+                    <li class="filter-item">
+                        <button data-filter-btn value="Web design">Web Design</button>
+                    </li>
+
                 </ul>
 
                 <div class="filter-select-box">
@@ -810,6 +774,10 @@
                             <button data-select-item>Internet of Things</button>
                         </li>
 
+                        <li class="select-item">
+                            <button value="Web design" data-select-item>Web Design</button>
+                        </li>
+
                     </ul>
 
                 </div>
@@ -817,14 +785,14 @@
                 <ul class="project-list">
 
                     <li class="project-item  active" data-category="internet of things" data-filter-item>
-                        <a href="#">
+
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </div>
 
-                                <img alt="finance" loading="lazy" src="./assets/images/project-1.jpg">
+                                <img alt="SMart Notice Board" loading="lazy" src="assets/images/project-1.jpeg">
                             </figure>
 
                             <h3 class="project-title">Smart Notice Board</h3>
@@ -839,10 +807,10 @@
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
+                                    <ion-icon name="eye-off-outline"></ion-icon>
                                 </div>
 
-                                <img alt="orizon" loading="lazy" src="./assets/images/project-2.png">
+                                <img alt="Report Sender Manager" loading="lazy" src="assets/images/project-2.jpeg">
                             </figure>
 
                             <h3 class="project-title">Report Sender Manager</h3>
@@ -857,10 +825,10 @@
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
+                                    <ion-icon name="eye-off-outline"></ion-icon>
                                 </div>
 
-                                <img alt="fundo" loading="lazy" src="./assets/images/project-3.jpg">
+                                <img alt="Monitoring System for Pressure and Temperature" loading="lazy" src="./assets/images/project-3.jpg">
                             </figure>
 
                             <h3 class="project-title">Monitoring System for Pressure and Temperature</h3>
@@ -875,10 +843,10 @@
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
-                                    <ion-icon name="eye-outline"></ion-icon>
+                                    <ion-icon name="eye-off-outline"></ion-icon>
                                 </div>
 
-                                <img alt="brawlhalla" loading="lazy" src="./assets/images/project-4.png">
+                                <img alt="Education and Learning Platform" loading="lazy" src="assets/images/project-4.jpeg">
                             </figure>
 
                             <h3 class="project-title">Education and Learning Platform</h3>
@@ -888,6 +856,23 @@
                         </a>
                     </li>
 
+                    <li class="project-item  active" data-category="web design" data-filter-item>
+                        <a href="https://github.com/Abhisek-Pandey/public" target="_blank">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img alt="Portfolio" loading="lazy" src="./assets/images/project-5.png">
+                            </figure>
+
+                            <h3 class="project-title">Portfolio page</h3>
+
+                            <p class="project-category">Web Design</p>
+
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -910,175 +895,14 @@
 
                 <ul class="blog-posts-list">
 
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="Design conferences in 2022" loading="lazy" src="./assets/images/blog-1.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                                <p class="blog-text">
-                                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="Best fonts every designer" loading="lazy" src="./assets/images/blog-2.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                                <p class="blog-text">
-                                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="Design digest #80" loading="lazy" src="./assets/images/blog-3.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                                <p class="blog-text">
-                                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam
-                                    corporis suscipit.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="UI interactions of the week" loading="lazy" src="./assets/images/blog-4.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                                <p class="blog-text">
-                                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco
-                                    laboris nisi.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="The forgotten art of spacing" loading="lazy" src="./assets/images/blog-5.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                                <p class="blog-text">
-                                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
-
-                    <li class="blog-post-item">
-                        <a href="#">
-
-                            <figure class="blog-banner-box">
-                                <img alt="Design digest #79" loading="lazy" src="./assets/images/blog-6.jpg">
-                            </figure>
-
-                            <div class="blog-content">
-
-                                <div class="blog-meta">
-                                    <p class="blog-category">Design</p>
-
-                                    <span class="dot"></span>
-
-                                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                                </div>
-
-                                <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                                <p class="blog-text">
-                                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                                </p>
-
-                            </div>
-
-                        </a>
-                    </li>
+<!--                    <li class="blog-post-item" id="BlogPost8"></li>-->
+<!--                    <li class="blog-post-item" id="BlogPost7"></li>-->
+<!--                    <li class="blog-post-item" id="BlogPost6"></li>-->
+                    <li class="blog-post-item" id="BlogPost5"></li>
+                    <li class="blog-post-item" id="BlogPost4"></li>
+                    <li class="blog-post-item" id="BlogPost3"></li>
+                    <li class="blog-post-item" id="BlogPost2"></li>
+                    <li class="blog-post-item" id="BlogPost1"></li>
 
                 </ul>
 
@@ -1111,24 +935,41 @@
 
                 <h3 class="h3 form-title">Contact Form</h3>
 
-                <form action="#" class="form" data-form>
+                <form class="form" data-form>
 
                     <div class="input-wrapper">
-                        <input class="form-input" data-form-input name="fullname" placeholder="Full name" required
-                               type="text">
 
+                        <div class="rela">
+                            <ion-icon name="person-circle"></ion-icon>
+                        <input class="form-input" data-form-input name="fullname" placeholder="Full name" required
+                               autofocus type="text">
+
+                        </div>
+                        <div class="rela">
+                            <ion-icon name="mail"></ion-icon>
                         <input class="form-input" data-form-input name="email" placeholder="Email address" required
                                type="email">
+
+                        </div>
+                        <div class="rela full-width">
+                            <ion-icon name="chatbox-ellipses"></ion-icon>
+                            <textarea class="form-input" data-form-input name="message" placeholder="Your Message"
+                                      required></textarea>
+                        </div>
                     </div>
 
-                    <textarea class="form-input" data-form-input name="message" placeholder="Your Message"
-                              required></textarea>
 
-                    <button class="form-btn" data-form-btn disabled type="submit">
-                        <ion-icon name="paper-plane"></ion-icon>
-                        <span>Send Message</span>
+
+                    <div class="form-btn-cnt">
+                    <button class="form-btn" data-form-btn EMAIL disabled type="button">
+                        <ion-icon name="mail" ></ion-icon>
+                        <span email >Email</span>
                     </button>
-
+                    <button class="form-btn" data-form-btn WHATSAPP disabled type="button">
+                        <ion-icon name="logo-whatsapp" style="fill: var(--color-8)"></ion-icon>
+                        <span whatsapp >Message</span>
+                    </button>
+                    </div>
                 </form>
 
             </section>

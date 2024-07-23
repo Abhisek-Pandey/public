@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        Understanding Version Control: Git and GitHub
+    </title>
+
+    <!--
+      - favicon
+    -->
+    <link href="../images/logo.svg" rel="shortcut icon" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!--
+      - google font link
+    -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="light_theme">
+
+<main>
+
+    <aside class="navigation" data-navigation>
+
+        <div class="navigation-info">
+
+            <div class="menu-content">
+                <h1 class="name" title="BLOGS">BLOGS</h1>
+            </div>
+
+            <button class="home">
+                <a href="https://abhisek-pandey.github.io/public/">
+                    <ion-icon name="home"></ion-icon>
+                </a>
+            </button>
+            <button class="theme-button" aria-label="Change Theme" title="Change Theme" data-theme-button>
+                <ion-icon id="icon" name="sunny"></ion-icon>
+            </button>
+
+            <button class="menu_more-btn" data-navigation-btn>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
+        </div>
+
+        <div class="navigation-info_more">
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="./TechnicalDives.html"><p class="title">Technical Dives</p></a>
+            </div>
+
+            <div class="menu-content">
+                <a href="../event/EventAndSocial.html"><p class="title">Events & Social</p></a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost1">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost2">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost3">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost4">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost5">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div class="main-content">
+        <article class="blog  active" data-page="blog">
+
+            <header>
+                <h2 class="h2 article-title">
+                    Understanding Version Control: Git and GitHub
+                </h2>
+            </header>
+
+            <section class="blog-text">
+                <p>
+                    In the ever-evolving landscape of software development, maintaining an efficient and organized
+                    workflow is paramount. Version control systems (VCS) have become essential tools for developers,
+                    enabling them to manage changes to their codebase, collaborate seamlessly with team members, and
+                    track the evolution of their projects. This blog delves into the fundamentals of version control,
+                    with a particular focus on Git and GitHub, two of the most popular tools in the domain. By the end
+                    of this comprehensive guide, you will have a solid understanding of version control concepts, the
+                    features and benefits of Git, and how GitHub enhances collaborative development.
+
+                </p>
+                <figure class="image-box">
+                    <img alt="Blog Image" src="../images/VersionControl-1.png" width="80">
+                </figure>
+                <h4 class="h4">
+                    What is Version Control?
+                </h4>
+                <p>
+                    Version control, also known as source control or revision control, is a system that records changes
+                    to files over time so that specific versions can be recalled later. It allows multiple developers to
+                    work on a project simultaneously, keeps track of every modification made to the code, and provides a
+                    historical record of the project's evolution.
+                    <br>
+                    <b>Key Benefits of Version Control:</b>
+                </p>
+                <p>
+                <ol>
+                    <li>
+                        <b>Collaboration:</b> Multiple developers can work on the same project concurrently without
+                        overwriting each other's changes.
+                    </li>
+                    <li>
+                        <b>History Tracking:</b> Every change is documented, making it easy to revert to previous
+                        versions if needed.
+                    </li>
+                    <li>
+                        <b>Branching and Merging:</b> Developers can create branches to work on new features or bug
+                        fixes in isolation, then merge their changes back into the main codebase.
+                    </li>
+                    <li>
+                        <b>Backup and Restore:</b> The entire history of the project is stored in the VCS, providing a
+                        reliable backup in case of data loss.
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Introduction to Git
+                </h4>
+                <p>
+                    Git is a distributed version control system (DVCS) designed to handle everything from small to very
+                    large projects with speed and efficiency. Created by Linus Torvalds in 2005, Git has become the de
+                    facto standard for version control in the software development industry.
+                    <br>
+                    <b>Key Features of Git:</b>
+                </p>
+                <p>
+                <ol>
+                    <li>
+                        <b>Distributed Architecture:</b> Unlike centralized version control systems, Git allows each
+                        developer to have a complete copy of the repository, including its history. This enhances
+                        performance and provides redundancy.
+                    </li>
+                    <li>
+                        <b>Performance:</b> Git is optimized for speed. Operations such as branching, merging, and
+                        committing are fast and efficient.
+                    </li>
+                    <li>
+                        <b>Branching and Merging:</b> Git's branching model is simple and flexible. Developers can
+                        create, switch, and merge branches effortlessly.
+                    </li>
+                    <li>
+                        <b>Integrity:</b> Every file and commit in Git is checksummed using a SHA-1 hash, ensuring data
+                        integrity.
+                    </li>
+                    <li>
+                        <b>Staging Area:</b> Git uses a staging area (index) to prepare commits, allowing developers to
+                        group related changes before committing them.
+                    </li>
+                </ol>
+                </p>
+                <p>
+                    <b>Basic Git Workflow:</b>
+                <ol>
+                    <li>
+                        Clone: Clone an existing repository to create a local copy.
+                    </li>
+                    <li>
+                        Stage Changes: Add changes to the staging area.
+                    </li>
+                    <li>
+                        Commit: Save the staged changes to the local repository.
+                    </li>
+                    <li>
+                        Push: Upload local commits to a remote repository.
+                    </li>
+                    <li>
+                        Pull: Fetch and merge changes from a remote repository into the local repository.
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Getting Started with Git
+                </h4>
+                <h5 class="h5">
+                    Installation:
+                </h5>
+                <p>
+                    Git is available for various operating systems, including Windows, macOS, and Linux. Installation
+                    packages can be downloaded from the official Git website (https://git-scm.com/).
+                </p>
+                <h5 class="h5">
+                    Configuring Git:
+                </h5>
+                <p>
+                    After installing Git, configure your user information, which will be associated with your commits.
+                </p>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git config
+                        <pr>--global</pr>
+                        user.name
+                        <cb>"</cb>
+                        <ud>Your Name</ud>
+                        <cb>"</cb>
+                        <br>
+                        git config
+                        <pr>--global</pr>
+                        user.email
+                        <cb>"</cb>
+                        <ud>your.email@example.com</ud>
+                        <cb>"</cb>
+                    </p>
+                </div>
+                <h5 class="h5">
+                    Creating a Repository:
+                </h5>
+                <p>
+                    To create a new Git repository, navigate to your project directory and run the following command:
+                </p>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git
+                        <pr>init</pr>
+                    </p>
+                </div>
+                <h5 class="h5">
+                    Basic Commands:
+                </h5>
+                <p>
+                <ol>
+                    <li>
+                        <h5 class="h5">
+                            Cloning a Repository:
+                        </h5>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>clone</pr>
+                                <cb>&#60</cb>
+                                <ud> repository-url</ud>
+                                <cb><&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h5">
+                            Staging Changes:
+                        </h5>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>add</pr>
+                                <cb>&#60</cb>
+                                <ud>file-path</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h5">
+                            Committing Changes:
+                        </h5>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>commit</pr>
+                                -m
+                                <cb>"</cb>
+                                <ud> Commit message</ud>
+                                <cb>"</cb>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h5">
+                            Pushing Changes:
+                        </h5>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>push origin</pr>
+                                <cb>&#60</cb>
+                                <ud> branch-name</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h5">
+                            Pulling Changes:
+                        </h5>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>pull origin</pr>
+                                <cb>&#60</cb>
+                                <ud> branch-name</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Understanding Branching in Git
+                </h4>
+                <p>
+                    Branching is one of Git's most powerful features, allowing developers to diverge from the main
+                    codebase to develop new features, fix bugs, or experiment without affecting the stable version of
+                    the project.
+                </p>
+                <h5 class="h5">
+                    Creating and Switching Branches:
+                </h5>
+                <p>
+                    To create a new branch, use the following command:
+                </p>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git
+                        <pr>branch</pr>
+                        <cb>&#60</cb>
+                        <ud> branch-name</ud>
+                        <cb>&#62</cb>
+                    </p>
+                </div>
+                <h5 class="h5">
+                    To switch to a different branch, use:
+                </h5>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git
+                        <pr>checkout</pr>
+                        <cb>&#60</cb>
+                        <ud> branch-name</ud>
+                        <cb>&#62</cb>
+                    </p>
+                </div>
+                <h5 class="h5">
+                    Alternatively, you can create and switch to a new branch in one command:
+                </h5>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git
+                        <pr>checkout</pr>
+                        -b
+                        <cb>&#60</cb>
+                        <ud> branch-name</ud>
+                        <cb>&#62</cb>
+                    </p>
+                </div>
+                <h4 class="h4">
+                    Merging Branches:
+                </h4>
+                <p>
+                    Once your work on a branch is complete, you can merge it back into the main branch (often `main` or
+                    `master`):
+                </p>
+                <div class="code">
+                    <h5>
+                        Shell Commands
+                    </h5>
+                    <p>
+                        git
+                        <pr>checkout</pr>
+                        <ud>main</ud>
+                        <br>
+                        git
+                        <pr>merge</pr>
+                        <cb>&#60</cb>
+                        <ud> branch-name</ud>
+                        <cb>&#62</cb>
+                    </p>
+                </div>
+                <h4 class="h4">
+                    Resolving Merge Conflicts:
+                </h4>
+                <p>
+                    Merge conflicts occur when changes in different branches conflict with each other. Git will prompt
+                    you to resolve the conflicts manually. After resolving the conflicts, stage the changes and commit
+                    them.
+                </p>
+                <h4 class="h4">
+                    Introduction to GitHub
+                </h4>
+                <p>
+                    GitHub is a web-based platform that extends Git's functionality by providing a centralized location
+                    for hosting Git repositories. It offers a range of features that facilitate collaboration, project
+                    management, and code review.
+                    <br>
+                    <b>Key Features of GitHub:</b>
+                </p>
+                <p>
+                <ol>
+                    <li>
+                        <b>Repository Hosting:</b> Host and manage your Git repositories in the cloud.
+                    </li>
+                    <li>
+                        <b>Collaboration:</b> Collaborate with team members through features like pull requests, code
+                        reviews, and issue tracking.
+                    </li>
+                    <li>
+                        <b>Project Management:</b> Organize and prioritize your work with integrated project boards and
+                        task tracking.
+                    </li>
+                    <li>
+                        <b>Continuous Integration/Continuous Deployment (CI/CD):</b> Automate testing and deployment
+                        processes with GitHub Actions.
+                    </li>
+                    <li>
+                        <b>Security:</b> Secure your code with features like vulnerability alerts and dependency
+                        management.
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Getting Started with GitHub:
+                </h4>
+                <p>
+                <ol>
+                    <li>
+                        <b>Creating a GitHub Account:</b><br>
+                        Sign up for a free GitHub account at https://github.com/.
+                    </li>
+                    <li>
+                        <b>Creating a Repository:</b><br>
+                        Once logged in, click on the `New` button to create a new repository. Provide a name,
+                        description, and choose the repository's visibility (public or private).
+                    </li>
+                    <li>
+                        <b>Cloning a Repository:</b><br>
+                        To clone a repository hosted on GitHub, use the `git clone` command followed by the repository
+                        URL:
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>clone</pr>
+                                <ud><u>https://github.com/username/repository.git</u></ud>
+
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <b>Pushing to GitHub:</b><br>
+                        After making changes to your local repository, you can push them to GitHub:
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>push origin</pr>
+                                <cb>&#60</cb>
+                                <ud> branch-name</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Collaborative Development with GitHub
+                </h4>
+                <h5 class="h5">
+                    Pull Requests:
+                </h5>
+                <p>
+                    A pull request (PR) is a method of submitting contributions to a project. It allows developers to
+                    review the changes, discuss them, and merge them into the main codebase.
+                </p>
+                <ol>
+                    <li>
+                        <b>Creating a Pull Request:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Push your changes to a new branch on GitHub.
+                            </li>
+                            <li class="circle-list">
+                                Navigate to the repository on GitHub, and you'll see a prompt to create a pull request.
+                            </li>
+                            <li class="circle-list">
+                                Provide a title and description for the PR, and specify the branch you want to merge
+                                into.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Reviewing and Merging Pull Requests:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Team members can review the PR, leave comments, and request changes.
+                            </li>
+                            <li class="circle-list">
+                                Once the changes are approved, the PR can be merged into the main branch.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5 class="h5">
+                    Issues and Project Boards:
+                </h5>
+                <p>
+                    GitHub Issues is a powerful tool for tracking bugs, feature requests, and other tasks. Project
+                    boards provide a Kanban-style interface for managing issues and pull requests.
+                </p>
+                <ol>
+                    <li>
+                        <b>Creating an Issue:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Navigate to the `Issues` tab in your repository.
+                            </li>
+                            <li class="circle-list">
+                                Click `New issue`, provide a title and description, and submit the issue.
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Reviewing and Merging Pull Requests:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Create a new project board from the `Projects` tab.
+                            </li>
+                            <li class="circle-list">
+                                Add issues and pull requests to the board as cards.
+                            </li>
+                            <li class="circle-list">
+                                Organize and prioritize tasks by moving cards between columns.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4 class="h4">
+                    Advanced Git and GitHub Features
+                </h4>
+                <h5 class="h5">
+                    Git Hooks:
+                </h5>
+                <p>
+                    Git hooks are scripts that run automatically at certain points in the Git workflow. They can be used
+                    for tasks like enforcing coding standards, running tests, or sending notifications.
+                </p>
+                <ol>
+                    <li>
+                        <b>Client-Side Hooks:</b>
+                        <ul>
+                            <li class="circle-list">
+                                These run on operations such as committing and merging.
+                            </li>
+                            <li class="circle-list">
+                                Examples: `pre-commit`, `pre-push`.
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Server-Side Hooks:</b>
+                        <ul>
+                            <li class="circle-list">
+                                These run on the server during operations like receiving pushed commits.
+                            </li>
+                            <li class="circle-list">
+                                Examples: `pre-receive`, `post-receive`.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5 class="h5">
+                    GitHub Actions:
+                </h5>
+                <p>
+                    GitHub Actions is a CI/CD platform that allows you to automate workflows directly in your GitHub
+                    repository.
+                </p>
+                <ol>
+                    <li>
+                        <b>Creating a Workflow:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Create a `.github/workflows` directory in your repository.
+                            </li>
+                            <li class="circle-list">
+                                Add a YAML file describing the workflow.
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Example Workflow:</b>
+                        <div class="code">
+                            <h5>
+                                yaml
+                            </h5>
+                            <p>
+                                name
+                                <cb>:</cb>
+                                <ud>CI</ud>
+                                <br>
+                                <br>
+                                on
+                                <cb>:</cb>
+                                <cb>[</cb>
+                                <ud>push, pull_request</ud>
+                                <cb>]</cb>
+                                <br>
+                                <br>
+                                jobs
+                                <cb>:</cb>
+                                <br>
+                                &emsp;
+                                build
+                                <cb>:</cb>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                runs-on
+                                <cb>:</cb>
+                                <ud>ubuntu-latest</ud>
+                                <br>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                steps
+                                <cb>:</cb>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                uses
+                                <cb>:</cb>
+                                <ud>actions/checkout@v2</ud>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                name
+                                <cb>:</cb>
+                                <ud>Set up Node.js</ud>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                uses
+                                <cb>:</cb>
+                                <ud>actions/setup-node@v2</ud>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                with
+                                <cb>:</cb>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                node-version
+                                <cb>:</cb>
+                                <ud>14</ud>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                run
+                                <cb>:</cb>
+                                <ud>npm install</ud>
+                                <br>
+                                &emsp;
+                                &emsp;
+                                &emsp;
+                                run
+                                <cb>:</cb>
+                                <ud>npm test</ud>
+                                <br>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                <h5 class="h5">
+                    Git Submodules:
+                </h5>
+                <p>
+                    Submodules allow you to include one Git repository inside another as a sub-directory.
+                </p>
+                <ol>
+                    <li>
+                        <b>Adding a Submodule:</b>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>submodule add</pr>
+                                <cb>&#60</cb>
+                                <ud>repository-url</ud>
+                                <cb>&#62</cb>
+                                <cb> &#60</cb>
+                                <ud>path</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <b>Cloning a Repository with Submodules:</b>
+                        <div class="code">
+                            <h5>
+                                Shell Commands
+                            </h5>
+                            <p>
+                                git
+                                <pr>clone --recurse-submodules</pr>
+                                <cb>&#60</cb>
+                                <ud>repository-url</ud>
+                                <cb>&#62</cb>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+                <h4 class="h4">
+                    Best Practices
+                </h4>
+                <p>
+                    for Using Git and GitHub
+                </p>
+                <ol>
+                    <li>
+                        <b>Write Clear Commit Messages:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Use the imperative mood: "Fix bug" instead of "Fixed bug".
+                            </li>
+                            <li class="circle-list">
+                                Provide a concise summary and detailed description if necessary.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Use Branches Effectively:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Keep the main branch stable and deployable.
+                            </li>
+                            <li class="circle-list">
+                                Use feature branches for new features and bug fixes.
+                            </li>
+                            <li class="circle-list">
+                                Delete merged branches to keep the repository clean.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b> Review Code Thoroughly:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Conduct code reviews for every pull request.
+                            </li>
+                            <li class="circle-list">
+                                Use tools like GitHub Actions to automate code quality checks.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b> Maintain a Clean History:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Use interactive rebase to combine related commits before merging.
+                            </li>
+                            <li class="circle-list">
+                                Avoid committing large files and binaries directly to the repository.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Document Your Workflow:</b>
+                        <ul>
+                            <li class="circle-list">
+                                Provide a CONTRIBUTING.md file with guidelines for contributing to the project.
+                            </li>
+                            <li class="circle-list">
+                                Use a README.md file to describe the project and its setup instructions.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4 class="h4">
+                    Conclusion
+                </h4>
+                <p>
+                    Version control systems are indispensable tools for modern software development, offering a
+                    structured and efficient way to manage code changes, collaborate with team members, and track
+                    project history. Git, with its distributed architecture and powerful features, has emerged as the
+                    leading version control system. Coupled with GitHub's collaboration and project management
+                    capabilities, developers can streamline their workflows, improve code quality, and enhance team
+                    productivity.
+                </p>
+                <p>
+                    By mastering Git and GitHub, you can take full advantage of version control to manage your projects
+                    effectively, collaborate seamlessly with others, and maintain a high standard of code quality.
+                    Whether you are a solo developer or part of a large team, understanding and leveraging the power of
+                    these tools will significantly enhance your software development experience.
+                </p>
+            </section>
+
+        </article>
+    </div>
+</main>
+
+
+<!--
+  - custom js link
+-->
+<script src="../js/script.js"></script>
+
+<!--
+  - ionicon link
+-->
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
