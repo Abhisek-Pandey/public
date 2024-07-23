@@ -50,6 +50,26 @@ for (let i = 0; i < testimonialsItem.length; i++) {
   });
 
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('theme-toggle-btn');
+  const themeIcon = document.getElementById('theme-icon');
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+
+  if (currentTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeIcon.setAttribute('name', 'sunny-outline');
+  } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeIcon.setAttribute('name', 'moon-outline');
+  }
+
+  toggleButton.addEventListener('click', function() {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      themeIcon.setAttribute('name', theme === 'dark' ? 'moon-outline' : 'sunny-outline');
+      localStorage.setItem('theme', theme);
+  });
+});
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);

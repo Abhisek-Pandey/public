@@ -10,7 +10,7 @@
     <!--
       - favicon
     -->
-    <link href="./assets/images/logo.svg" rel="shortcut icon" type="image/x-icon">
+    <link href="./assets/images/logo.ico" rel="shortcut icon" type="image/x-icon">
 
     <!--
       - custom css link
@@ -38,7 +38,9 @@
     -->
 
     <aside class="sidebar" data-sidebar>
-
+        <button id="theme-toggle-btn">
+            <ion-icon id="theme-icon" name="moon-outline"></ion-icon>
+        </button>
         <div class="sidebar-info">
 
             <figure class="avatar-box">
@@ -48,7 +50,7 @@
             <div class="info-content">
                 <h1 class="name" title="Abhisek Pandey">Abhisek Pandey</h1>
 
-                <p class="title">Software Engineer</p>
+                <p class="title">Software Developer</p>
             </div>
 
             <button class="info_more-btn" data-sidebar-btn>
@@ -286,15 +288,14 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="Web development icon" src="./assets/images/icon-app.svg" width="40">
+                            <img alt="Web development icon" src="./assets/images/icon-dev.svg" width="40">
                         </div>
 
                         <div class="service-content-box">
                             <h4 class="h4 service-item-title">Internet of Things</h4>
 
                             <p class="service-item-text">
-                                High-quality development of site monitoring IoT devices and standalone devices with
-                                scalable functionalities.
+                                High-quality development of site monitoring IoT devices.
                             </p>
                         </div>
 
@@ -303,15 +304,14 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img alt="mobile app icon" src="./assets/images/icon-dev.svg" width="40">
+                            <img alt="mobile app icon" src="./assets/images/icon-app.svg" width="40">
                         </div>
 
                         <div class="service-content-box">
                             <h4 class="h4 service-item-title">Web Application</h4>
 
                             <p class="service-item-text">
-                                Professional development of Web applications and microservices with robust and load
-                                balancing nature.
+                                Professional development of Web applications.
                             </p>
                         </div>
 
@@ -327,8 +327,7 @@
                             <h4 class="h4 service-item-title">Photography</h4>
 
                             <p class="service-item-text">
-                                Through the lens of my camera, I weave stories of light and shadow, capturing life's
-                                fleeting beauty.
+                                I make high-quality photos of any category at a professional level.
                             </p>
                         </div>
 
@@ -362,13 +361,13 @@
 
                             <div class="testimonials-text" data-testimonials-text>
                                 <p>
-                                    I can confidently say that he is an exceptional colleague. His dedication,
-                                    professionalism, and positive attitude have greatly contributed to our team's
-                                    success. He consistently goes above and beyond, demonstrating outstanding
-                                    problem-solving skills and a keen attention to detail. He is always willing to
-                                    lend a hand and provide valuable insights, making him an invaluable asset to any
-                                    project. It's truly a privilege to work alongside someone so talented and
-                                    committed to excellence.
+                                    Richard was hired to create a corporate identity. We were very pleased with the work
+                                    done. She has a
+                                    lot of experience
+                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
+                                    ullamcous cididt
+                                    consectetur adipiscing
+                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                                 </p>
                             </div>
 
@@ -383,18 +382,19 @@
                                      width="60">
                             </figure>
 
-                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Kiran Ranjan</h4>
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Priya Padhi</h4>
                             <time data-testimonials-date datetime="2022-12-19" style="display: none">19 December, 2022
                             </time>
 
                             <div class="testimonials-text" data-testimonials-text>
                                 <p>
-                                    It is my pleasure to recommend him for his exceptional excellence, trustworthiness,
-                                    and reliability. During his internship, he consistently demonstrated top-notch
-                                    performance and a commendable work ethic. He reliably met all deadlines, often
-                                    exceeding expectations with his high-quality work. His integrity and effective
-                                    time management skills have made him an invaluable asset. Mentoring him has been
-                                    a privilege, and I am confident he will continue to excel in all his future endeavors.
+                                    Richard was hired to create a corporate identity. We were very pleased with the work
+                                    done. She has a
+                                    lot of experience
+                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
+                                    ullamcous cididt
+                                    consectetur adipiscing
+                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                                 </p>
                             </div>
 
@@ -763,7 +763,7 @@
                 <ul class="filter-list">
 
                     <li class="filter-item">
-                        <button class="active" value="All" data-filter-btn>All</button>
+                        <button class="active" data-filter-btn>All</button>
                     </li>
 
                     <li class="filter-item">
@@ -795,19 +795,19 @@
                     <ul class="select-list">
 
                         <li class="select-item">
-                            <button value="All" data-select-item>All</button>
+                            <button data-select-item>All</button>
                         </li>
 
                         <li class="select-item">
-                            <button value="Web application" data-select-item>Web Application</button>
+                            <button data-select-item>Web application</button>
                         </li>
 
                         <li class="select-item">
-                            <button value="Applications" data-select-item>Applications</button>
+                            <button data-select-item>Applications</button>
                         </li>
 
                         <li class="select-item">
-                            <button value="Internet of things" data-select-item>Internet of Things</button>
+                            <button data-select-item>Internet of Things</button>
                         </li>
 
                     </ul>
@@ -817,7 +817,7 @@
                 <ul class="project-list">
 
                     <li class="project-item  active" data-category="internet of things" data-filter-item>
-                        <a href="https://github.com/Abhisek-Pandey/Smart-Noticeboard">
+                        <a href="#">
 
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
