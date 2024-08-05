@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        Cloud Computing: A Beginner's Guide to Deploying Spring Boot Applications
+    </title>
+
+    <!--
+      - favicon
+    -->
+    <link href="../images/logo.svg" rel="shortcut icon" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!--
+      - google font link
+    -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="light_theme">
+
+<main>
+
+    <aside class="navigation" data-navigation>
+
+        <div class="navigation-info">
+
+            <div class="menu-content">
+                <h1 class="name" title="BLOGS">BLOGS</h1>
+            </div>
+
+            <button class="home">
+                <a href="../../index.html">
+                    <ion-icon name="home"></ion-icon>
+                </a>
+            </button>
+            <button class="theme-button" aria-label="Change Theme" title="Change Theme" data-theme-button>
+                <ion-icon id="icon" name="sunny"></ion-icon>
+            </button>
+
+            <button class="menu_more-btn" data-navigation-btn>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
+        </div>
+
+        <div class="navigation-info_more">
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="./TechnicalDives.html"><p class="title">Technical Dives</p></a>
+            </div>
+
+            <div class="menu-content">
+                <a href="../event/EventAndSocial.html"><p class="title">Events & Social</p></a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost1">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost2">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost3">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost4">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+            <div class="menu-content">
+                <a href="#" id="BlogPost5">
+                    <p class="title"></p>
+                </a>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div class="main-content">
+        <article class="blog  active" data-page="blog">
+
+            <header>
+                <h2 class="h2 article-title">
+                    Cloud Computing: A Beginner's Guide to Deploying Spring Boot Applications
+                </h2>
+            </header>
+
+            <section class="blog-text">
+                <p>
+                    If you're a developer looking to build and deploy robust, scalable applications, understanding cloud
+                    platforms is essential. This blog will guide you through the process of deploying Spring Boot
+                    applications on Amazon Web Services (AWS), one of the most popular cloud providers.
+                    <br>
+                    We'll start by demystifying cloud computing and its core benefits. Then, we'll introduce you to
+                    Spring Boot, a powerful framework for building Java applications. Finally, we'll dive into the AWS
+                    ecosystem, exploring key services and providing instructions for deploying your Spring Boot
+                    applications.
+                    <br>
+                    Whether you're a complete beginner or have some experience with cloud computing, this blog aims to
+                    equip you with the knowledge and practical skills to confidently deploy your applications on AWS.
+                    So, let's get started!
+                </p>
+                <figure class="image-box">
+                    <img alt="Blog Image" src="../images/CloudComputing-1.jpeg" width="80">
+                </figure>
+                <h4 class="h4">
+                    What is Cloud Computing?
+                </h4>
+                <p>
+                    Cloud computing is like renting powerful computers, storage space, and software from a remote
+                    location. Instead of buying and maintaining your own hardware, you can access these resources over
+                    the internet on an as-needed basis. It's similar to using electricity; you don't need to own a power
+                    plant to enjoy the benefits of electricity. With cloud computing, you don't need to manage the
+                    underlying infrastructure; you simply focus on building and running your applications.
+                </p>
+                <h4 class="h4">
+                    Key Benefits of Cloud Computing:
+                </h4>
+                <p>
+                <ul>
+                    <li class="circle-list"><b>Cost-effective:</b> Pay only for what you use.</li>
+                    <li class="circle-list"><b>Scalability:</b> Easily adjust resources based on demand.</li>
+                    <li class="circle-list"><b>Reliability:</b> Data is backed up and protected.</li>
+                    <li class="circle-list"><b>Accessibility:</b> Access your data and applications from anywhere.</li>
+                </ul>
+                </p>
+                <h4 class="h4">
+                    Major Cloud Providers:
+                </h4>
+                <p>
+                    There are three main players in the cloud computing world:
+                </p>
+                <p>
+                <ul>
+                    <li class="circle-list"><b>Amazon Web Services (AWS):</b> The pioneer and largest cloud provider.
+                    </li>
+                    <li class="circle-list"><b>Microsoft Azure:</b> Backed by Microsoft's vast resources.</li>
+                    <li class="circle-list"><b>Google Cloud Platform (GCP):</b> Known for its data analytics and machine
+                        learning
+                        capabilities.
+                    </li>
+                </ul>
+                </p>
+                <h3 class="h3">
+                    Understanding Spring Boot
+                </h3>
+                <h4 class="h4">
+                    What is Spring Boot?
+                </h4>
+                <p>
+                    Spring Boot is a framework that makes building Java applications super easy. It takes care of a lot
+                    of the boring stuff, so you can focus on the actual logic of your application. Think of it as a
+                    pre-built house; you just need to furnish it with your own ideas.
+                </p>
+                <h4 class="h4">
+                    Why Spring Boot and Cloud?
+                </h4>
+                <p>
+                    Spring Boot's ability to create standalone, self-contained applications aligns perfectly with the
+                    cloud's infrastructure-as-a-service (IaaS) model. This means your Spring Boot application can be
+                    easily packaged and deployed on various cloud platforms, including AWS. Furthermore, Spring Boot's
+                    convention over configuration approach reduces setup time and complexity, making it ideal for rapid
+                    development and deployment in cloud environments. The framework also offers excellent integration
+                    with cloud-native services, such as distributed messaging, databases, and caching, allowing you to
+                    build highly scalable and resilient applications.
+                </p>
+                <h3 class="h3">
+                    Diving into AWS: A Beginner's Guide
+                </h3>
+                <h4 class="h4">
+                    Creating an AWS Account
+                </h4>
+                <p>
+                    The first step is to create an AWS account. It's free to sign up, and you can start with a free tier
+                    to explore different services.
+                </p>
+                <h4 class="h4">
+                    Key AWS Services for Deploying Spring Boot Applications:
+                </h4>
+                <p>
+                <ol>
+                    <li><b>EC2 (Elastic Compute Cloud):</b> Virtual servers in the cloud.</li>
+                    <li><b>Elastic Beanstalk:</b> A platform as a service (PaaS) for deploying and scaling applications.
+                    </li>
+                    <li><b>Lambda:</b> Serverless compute service for running code without managing servers.</li>
+                    <li><b>S3 (Simple Storage Service):</b> Object storage for storing data.</li>
+                </ol>
+                </p>
+                <h3 class="h3">
+                    Deploying Spring Boot Applications on AWS
+                </h3>
+                <h4 class="h4">
+                    Option 1: Using EC2
+                </h4>
+                <p>
+                <ol>
+                    <li>
+                        <b>
+                            Choose an EC2 Instance Type:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Select an appropriate instance type based on your application's requirements, such as
+                                CPU, memory,
+                                storage, and networking. Consider using a free tier instance for testing or small-scale
+                                applications.
+                            </li>
+                            <li class="circle-list">
+                                For production environments, choose instance types that can handle expected traffic and
+                                load.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Create a Security Group:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                A security group acts as a firewall, controlling incoming and outgoing traffic to your
+                                EC2
+                                instance.
+                            </li>
+                            <li class="circle-list">
+                                Create a security group and allow SSH traffic (port 22) for initial access.
+                            </li>
+                            <li class="circle-list">
+                                Add rules to allow necessary traffic for your application, such as HTTP (port 80) or
+                                HTTPS
+                                (port 443).
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Launch the EC2 Instance:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Launch an EC2 instance using the chosen instance type and security group.
+                            </li>
+                            <li class="circle-list">
+                                Select an appropriate Amazon Machine Image (AMI) with the desired operating system
+                                (e.g.,
+                                Amazon
+                                Linux, Ubuntu).
+                            </li>
+                            <li class="circle-list">
+                                Configure key pairs for SSH access.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Connect to the Instance:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Use an SSH client to connect to your EC2 instance.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Install Java and Dependencies:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Update the package lists and install the Java Development Kit (JDK).
+                            </li>
+                            <li class="circle-list">
+                                Install any additional dependencies required by your Spring Boot application.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Deploy Your Spring Boot Application:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Transfer your compiled Spring Boot application (JAR or WAR file) to the EC2 instance.
+                            </li>
+                            <li class="circle-list">
+                                Use a process manager like `systemctl` or `screen` to run your application in the
+                                background.
+                            </li>
+                            <li class="circle-list">
+                                Configure environment variables and any necessary configuration files.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Monitor and Manage:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Use tools like `htop` or `top` to monitor resource utilization.
+                            </li>
+                            <li class="circle-list">
+                                Implement log management to track application behavior.
+                            </li>
+                            <li class="circle-list">
+                                Regularly update the instance and application to maintain security and performance.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Option 2: Using Elastic Beanstalk
+                </h4>
+                <p>
+                <ol>
+                    <li>
+                        <b>
+                            Create an Elastic Beanstalk environment:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Sign in to the AWS Management Console and navigate to the Elastic Beanstalk service.
+                            </li>
+                            <li class="circle-list">
+                                Click on "Create Application" to create a new application.
+                            </li>
+                            <li class="circle-list">
+                                Choose a platform (e.g., Java) and environment type (e.g., Single Instance) for your
+                                application.
+                            </li>
+                            <li class="circle-list">
+                                Configure the environment settings, such as instance type, key pair, security groups,
+                                and VPC.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Upload your Spring Boot application:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Elastic Beanstalk supports deploying applications from various sources, including code
+                                repositories
+                                (e.g., GitHub, GitLab), local files, and S3 buckets.
+                            </li>
+                            <li class="circle-list">
+                                Choose the appropriate deployment option and upload your Spring Boot application (JAR or
+                                WAR file).
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Configure environment settings (optional):
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Elastic Beanstalk provides flexibility to customize environment settings through
+                                configuration
+                                files.
+                            </li>
+                            <li class="circle-list">
+                                You can define environment variables, configure database connections, and specify other
+                                settings as
+                                needed.
+                            </li>
+                            <li class="circle-list">
+                                Elastic Beanstalk supports configuration files in various formats, including
+                                <b>`.ebextensions`</b>, <b>`.config`</b>, and <b>`.option_settings`</b>.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Option 3: Using AWS Lambda
+                </h4>
+                <p>
+                <ol>
+                    <li>
+                        <b>
+                            Package your Spring Boot application as a JAR:
+                        </b>
+                        <p>
+                            To create a JAR file suitable for Lambda, you'll need to follow these steps:
+                        <ul>
+                            <li class="circle-list">
+                                Create a Maven or Gradle project: Set up your Spring Boot project using either Maven or
+                                Gradle.
+                            </li>
+                            <li class="circle-list">
+                                Include necessary dependencies: Ensure your project includes the required dependencies
+                                for your
+                                application's functionality.
+                            </li>
+                            <li class="circle-list">
+                                Configure the main class: Specify the main class that serves as the entry point for your
+                                application.
+                            </li>
+                            <li class="circle-list">
+                                Build the JAR: Use the `mvn clean package` or `gradle build` command to create the
+                                executable JAR
+                                file.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Create a Lambda function:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Choose a runtime: Select the appropriate Java runtime version for your application.
+                            </li>
+                            <li class="circle-list">
+                                Define the function handler: Specify the method within your JAR that will be invoked
+                                when the Lambda
+                                function is triggered.
+                            </li>
+                            <li class="circle-list">
+                                Configure memory and timeout: Set the memory allocation and timeout duration for the
+                                function.
+                            </li>
+                            <li class="circle-list">
+                                Create a role: Assign an IAM role to the function with necessary permissions to access
+                                resources
+                                (e.g., S3, DynamoDB).
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            Deploy the JAR file:
+                        </b>
+                        <p>
+                        <ul>
+                            <li class="circle-list">
+                                Upload the JAR: You can upload the JAR directly to the Lambda function's code section.
+                            </li>
+                            <li class="circle-list">
+                                Use S3 for deployment: Alternatively, store the JAR in an S3 bucket and configure the
+                                Lambda
+                                function to use it as a code source.
+                            </li>
+                        </ul>
+                        </p>
+                    </li>
+                </ol>
+                </p>
+                <h4 class="h4">
+                    Additional considerations:
+                </h4>
+                <p>
+                <ul>
+                    <li>
+                        <b>
+                            Environment variables:
+                        </b>
+                        Set environment variables within the Lambda function's configuration to provide configuration
+                        values to your application.
+
+                    </li>
+                    <li>
+                        <b>
+                            Dependency management:
+                        </b>
+                        If your application has external dependencies, consider using Lambda Layers to manage them
+                        efficiently.
+                    </li>
+                    <li>
+                        <b>
+                            Testing:
+                        </b>
+                        Thoroughly test your Lambda function to ensure it works as expected in the serverless
+                        environment.
+
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">
+                    Additional Considerations
+                </h4>
+                <p>
+                <ul>
+                    <li>
+                        <b>Database:</b> AWS offers various database services like RDS, DynamoDB, and Aurora.
+                    </li>
+                    <li>
+                        <b>Load Balancing:</b> Use Elastic Load Balancing to distribute traffic across multiple instances.
+                    </li>
+                    <li>
+                        <b>Auto Scaling:</b> Automatically adjust the number of instances based on demand.
+                    </li>
+                    <li>
+                        <b>Monitoring:</b> Use AWS CloudWatch to monitor your application's performance.
+                    </li>
+                    <li>
+                        <b>Security:</b> Implement security best practices, including IAM roles, security groups, and
+                            encryption.
+                    </li>
+                </ul>
+                </p>
+                <h4 class="h4">
+                    Conclusion
+                </h4>
+                <p>
+                    Deploying Spring Boot applications on AWS is a powerful combination that can help you build scalable
+                    and reliable applications. While this overview provides a basic understanding, there's much more to
+                    explore. Experiment with different AWS services and fine-tune your deployments to optimize
+                    performance and cost.
+                </p>
+                <h5 class="h5">
+                    Remember: The cloud is a vast ocean of possibilities. Start small, learn as you go, and enjoy the
+                    journey!
+                </h5>
+                <div class="tipbox">
+                    <p>
+                        <b>Note:</b> This is a general outline. To provide a comprehensive guide, we would need to go
+                        into much more detail about each step, including code examples, configuration settings, and
+                        troubleshooting tips.
+                    </p>
+                </div>
+            </section>
+
+        </article>
+    </div>
+</main>
+
+
+<!--
+  - custom js link
+-->
+<script src="../js/script.js"></script>
+
+<!--
+  - ionicon link
+-->
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
