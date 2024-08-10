@@ -2,28 +2,28 @@
   "technical": [
     {
       "id": "BlogPost5",
-      "href": "./frameworksguide.html",
-      "text": "Unveiling the Power of Frameworks"
-    },
-    {
-      "id": "BlogPost4",
       "href": "./MicroservicePrinciples.html",
       "text": "Building Robust Microservices"
     },
     {
-      "id": "BlogPost3",
+      "id": "BlogPost4",
       "href": "./AgileMethodology.html",
       "text": "Agile Manifesto: A Beginner's Guide"
     },
     {
-      "id": "BlogPost2",
+      "id": "BlogPost3",
       "href": "./VersionControl.html",
       "text": "Understanding Version Control"
     },
     {
-      "id": "BlogPost1",
+      "id": "BlogPost2",
       "href": "./CloudComputing.html",
       "text": "Cloud Computing Deployment"
+    },
+    {
+      "id": "BlogPost1",
+      "href": "./ApacheKafka.html",
+      "text": "Apache Kafka: A Comprehensive Guide"
     }
   ],
   "events": [
@@ -44,6 +44,15 @@
     }
   ],
   "index": [
+    {
+      "id": "BlogPost8",
+      "href": "./blogs/technical/ApacheKafka.html",
+      "category": "Technical Dives",
+      "date": "2024-05-17",
+      "title": "Apache Kafka and Spring Boot: A Comprehensive Guide",
+      "text": "Unleash the power of real-time data with Kafka and Spring Boot.",
+      "img": "./blogs/images/ApacheKafka-1.jpeg"
+    },
     {
       "id": "BlogPost7",
       "href": "./blogs/technical/CloudComputing.html",
